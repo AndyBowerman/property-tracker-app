@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const CreateUserInput = ({ createUser, message }) => {
   return (
     <div>
@@ -15,7 +17,7 @@ const CreateUserInput = ({ createUser, message }) => {
         <p>{message}</p>
         <button type="submit">Create New User</button>
       </form>
-      <button>Login</button>
+      <Link to="/">Login</Link>
     </div>
   );
 };
