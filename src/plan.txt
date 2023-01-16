@@ -1,0 +1,8 @@
+login page
+create user page
+home page -> option to add property, view for sale, view for rent, view sold & rented, view unsold or unrented
+add property page
+for sale page
+for rent page
+sold / rented page
+unsold / unrented page
