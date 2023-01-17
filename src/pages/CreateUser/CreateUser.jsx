@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import CreateUserInput from "../../components/CreateUserInput/CreateUserInput";
@@ -8,7 +7,6 @@ import WelcomeHeader from "../../components/WelcomeHeader/WelcomeHeader";
 const CreateUser = () => {
   const [users, setUsers] = useState([]);
   const [message, setMessage] = useState("");
-  const navigate = useNavigate();
   const usersCollectionRef = collection(db, "users");
 
   const getUsers = async () => {
@@ -19,10 +17,6 @@ const CreateUser = () => {
   useEffect(() => {
     getUsers();
   }, []);
-
-  /* Put - check username doesn't exist
-  check passwords are the same
-  */
 
   const inputValidation = (e) => {
     e.preventDefault();
@@ -44,6 +38,10 @@ const CreateUser = () => {
       lastName: e.target.lastName.value,
       password: e.target.password.value,
       userName: e.target.userName.value,
+      forSale : [],
+      forRent: [],
+      sold: [],
+      unsold: []
     });
     setMessage("User created, return to the login page");
     e.target.firstName.value = "";

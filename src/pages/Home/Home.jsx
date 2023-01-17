@@ -12,71 +12,43 @@ import "./Home.scss";
 import HomeOptions from "../../components/HomeOptions/HomeOptions";
 
 const Home = () => {
-  const [time, setTime] = useState("0");
   const [message, setMessage] = useState("Good Morning");
   const [icon, setIcon] = useState(morning);
-  const [user, setUser] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
 
   const usersCollectionRef = collection(db, "users");
 
   const getUser = async () => {
     const data = await getDocs(usersCollectionRef);
     const ref = window.localStorage.getItem("PROPERTY_TRACKER_USER_REF");
-    const currentUser = data.docs.filter(user => user._key.path.segments[6] === JSON.parse(ref))
-    setUser(currentUser[0]);
-    setIsLoading(false);
-  };
-
-  const getTime = () => {
+    const currentUser = data.docs.filter(
+      (user) => user._key.path.segments[6] === JSON.parse(ref)
+    );
     const today = new Date();
-    setTime(today.getHours());
-  };
 
-  const declareMessage = () => {
-    if (time >= 0 && time < 4) {
-      setMessage(
-        "Good Night " + user._document.data.value.mapValue.fields.firstName.stringValue
-      );
+    if (today.getHours() >= 0 && today.getHours() < 4) {
+      setMessage("Good Night " + currentUser[0]._document.data.value.mapValue.fields.firstName.stringValue);
       setIcon(night);
-    } else if (time >= 4 && time < 12) {
-      setMessage(
-        Object.keys(user).length
-          ? "Good Morning " + user.firstName.stringValue
-          : "Good Morning"
-      );
+    } else if (today.getHours() >= 4 && today.getHours() < 12) {
+      setMessage("Good Morning " + currentUser[0]._document.data.value.mapValue.fields.firstName.stringValue);
       setIcon(morning);
-    } else if (time >= 12 && time < 17) {
-      setMessage(
-        Object.keys(user).length
-          ? "Good Afternoon " + user.firstName.stringValue
-          : "Good Afternoon"
-      );
+    } else if (today.getHours() >= 12 && today.getHours() < 17) {
+      setMessage("Good Afternoon " + currentUser[0]._document.data.value.mapValue.fields.firstName.stringValue);
       setIcon(afternoon);
-    } else if (time >= 17 && time <= 23) {
-      setMessage(
-        Object.keys(user).length
-          ? "Good Evening " + user.firstName.stringValue
-          : "Good Evening"
-      );
+    } else if (today.getHours() >= 17 && today.getHours() <= 23) {
+      setMessage("Good Evening " + currentUser[0]._document.data.value.mapValue.fields.firstName.stringValue);
       setIcon(evening);
     }
   };
 
   useEffect(() => {
-    getTime();
     getUser();
   }, []);
-
-  useEffect(() => {
-    declareMessage();
-  }, [isLoading])
 
   return (
     <div>
       <Layout>
         <img src={icon} alt="icon" className="icon" />
-        {!isLoading && <Header message={message} />}
+        <Header message={message} />
         <HomeOptions />
       </Layout>
     </div>

@@ -6,3 +6,13 @@ for sale page
 for rent page
 sold / rented page
 unsold / unrented page
+
+For sale
+title
+bedrooms
+bathrooms
+property type
+description
+mainImg
+supportImgs = []
+price
