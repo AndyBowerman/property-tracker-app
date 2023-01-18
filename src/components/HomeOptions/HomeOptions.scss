@@ -1,0 +1,46 @@
+@use '../../assets/sass/variables' as *;
+
+.home-options {
+    height: 60vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+
+    &__link {
+        color: $color-bright-white;
+        height: 8rem;
+        width: 27rem;
+        margin: 2rem 4rem;
+        text-decoration: none;        
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    &__text {
+        font-size: 2rem;
+        margin-left: 0.5rem;
+    }
+}
+
+#link-blue {
+    background-color: $color-blue;
+}
+
+#link-green {
+    background-color: #19D171;
+}
+
+#link-orange {
+    background-color: #E3B00B;
+}
+
+#link-red {
+    background-color: #C63535;
+}

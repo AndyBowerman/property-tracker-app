@@ -1,4 +1,16 @@
-.icon {
-    height: 100px;
-    width: auto;
+@use '../../assets/sass/variables' as *;
+
+.home {
+    padding: 4rem;
+    padding-top: 0;
+
+    &__container {
+        border-bottom: 1px dashed $color-dark-grey;
+
+        .home__title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+    }
 }

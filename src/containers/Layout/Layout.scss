@@ -1,0 +1,25 @@
+@use '../../assets/sass/variables' as *;
+
+.layout {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+
+    &__nav {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__main {
+        padding: 2rem;
+        min-height: 90vh;
+        min-width: 100vw;
+    }
+}

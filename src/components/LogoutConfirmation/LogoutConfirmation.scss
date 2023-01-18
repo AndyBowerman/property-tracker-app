@@ -1,0 +1,51 @@
+@use "../../assets/sass/variables" as *;
+
+.logout-confirmation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+
+  &__pop-up {
+    background-color: $color-bright-white;
+    position: absolute;
+    z-index: 1;
+    height: 14rem;
+    width: 28rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem;
+    border-radius: 0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  &__logout {
+    background-color: $color-blue;
+    border: none;
+    font-size: 1.5rem;
+    color: $color-white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
+  }
+
+  &__remain {
+    border: none;
+    font-size: 1.5rem;
+    background-color: $color-bright-white;
+    color: $color-blue;
+    cursor: pointer;
+  }
+}

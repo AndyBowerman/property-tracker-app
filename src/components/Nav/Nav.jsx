@@ -1,23 +1,22 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import "./Nav.scss";
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 
 const Nav = ({ toggleConfirmation }) => {
   return (
-    <ul>
-      <Link to="/home">
-        <li>Home</li>
+    <ul className="nav">
+      <Link to="/home" className="nav__link">
+      <HomeOutlinedIcon />
+        <li className="nav__text">Home</li>
       </Link>
-      <Link to="/add-property">
-        <li>Add New Property</li>
-      </Link>
-      <Link to="/for-sale">
-        <li>For Sale</li>
-      </Link>
-      <Link to="/for-rent">
-        <li>For Rent</li>
-      </Link>
-      <li>Sold / Rented Properties</li>
-      <li onClick={toggleConfirmation}>Logout</li>
+      <div className="nav__link">
+        <LogoutOutlinedIcon />
+        <li onClick={toggleConfirmation} className="nav__text">
+        Logout
+      </li>
+      </div>
+      
     </ul>
   );
 };

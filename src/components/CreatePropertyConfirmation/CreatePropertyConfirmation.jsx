@@ -1,11 +1,25 @@
-const CreatePropertyConfirmation = ({addNewProperty, getNewProperty}) => {
-  return (
-    <div>
-      <h1>Add listing?</h1>
-      <button onClick={() => addNewProperty()}>Yes</button>
-      <button onClick={getNewProperty}>No</button>
-    </div>
-  )
-}
+import "./CreatePropertyConfirmation.scss";
 
-export default CreatePropertyConfirmation
+const CreatePropertyConfirmation = ({ addNewProperty, getNewProperty }) => {
+  return (
+    <div className="create-property-confirmation">
+      <div className="create-property-confirmation__container">
+        <h1 className="create-property-confirmation__title">Create listing?</h1>
+        <button
+          className="create-property-confirmation__accept"
+          onClick={() => addNewProperty()}
+        >
+          Yes
+        </button>
+        <button
+          className="create-property-confirmation__decline"
+          onClick={getNewProperty}
+        >
+          No
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default CreatePropertyConfirmation;

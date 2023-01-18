@@ -1,0 +1,42 @@
+@use '../../assets/sass/variables' as *;
+
+.create-property-confirmation {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        background-color: $color-bright-white;
+        padding: 2rem 3rem;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        border-radius: 1rem;
+
+        .create-property-confirmation__title {
+            padding-bottom: 1rem;
+        }
+
+        .create-property-confirmation__accept {
+            background-color: $color-blue;
+            border: none;
+            font-size: 1.5rem;
+            color: $color-white;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            margin-right: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            cursor: pointer;
+          }
+        
+          .create-property-confirmation__decline {
+            border: none;
+            font-size: 1.5rem;
+            background-color: $color-bright-white;
+            color: $color-blue;
+            cursor: pointer;
+          }
+        }
+}

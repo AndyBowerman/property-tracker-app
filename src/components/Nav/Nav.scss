@@ -1,0 +1,24 @@
+@use '../../assets/sass/variables' as *;
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 5rem;
+
+    &__link {
+        padding: 0 3rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $color-dark-grey;
+        text-decoration: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .nav__text {
+            padding-left: 0.3rem;
+        }
+    }
+}
