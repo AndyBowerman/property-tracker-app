@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import ForSale from "./pages/ForSale/ForSale";
 import ForRent from "./pages/ForRent/ForRent";
 import AddProperty from "./pages/AddProperty/AddProperty";
+import './App.scss';
 
 function App() {
 

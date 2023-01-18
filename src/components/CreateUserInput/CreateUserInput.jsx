@@ -1,23 +1,24 @@
 import { Link } from "react-router-dom";
+import './CreateUserInput.scss';
 
 const CreateUserInput = ({ createUser, message }) => {
   return (
-    <div>
-      <form onSubmit={createUser}>
-        <input type="text" placeholder="Username" required name="userName" />
-        <input type="text" placeholder="First Name" required name="firstName" />
-        <input type="text" placeholder="Last Name" required name="lastName" />
-        <input type="text" placeholder="Password" required name="password" />
-        <input
-          type="text"
+    <div className="create-user-input">
+      <form className="create-user-input__form" onSubmit={createUser}>
+        <input className="create-user-input__text" type="text" placeholder="Username" required name="userName" />
+        <input className="create-user-input__text" type="text" placeholder="First Name" required name="firstName" />
+        <input className="create-user-input__text" type="text" placeholder="Last Name" required name="lastName" />
+        <input className="create-user-input__text" type="password" placeholder="Password" required name="password" />
+        <input className="create-user-input__text"
+          type="password"
           placeholder="Re-type Password"
           required
           name="password2"
         />
-        <p>{message}</p>
-        <button type="submit">Create New User</button>
+        <p className="create-user-input__message">{message}</p>
+        <button className="create-user-input__submit" type="submit">Create New User</button>
       </form>
-      <Link to="/">Login</Link>
+      <Link to="/" className="create-user-input__link">Login</Link>
     </div>
   );
 };

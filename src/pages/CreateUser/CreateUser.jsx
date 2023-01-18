@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import CreateUserInput from "../../components/CreateUserInput/CreateUserInput";
-import WelcomeHeader from "../../components/WelcomeHeader/WelcomeHeader";
+import "./CreateUser.scss";
+import home from '../../assets/home.svg';
 
 const CreateUser = () => {
   const [users, setUsers] = useState([]);
@@ -38,10 +39,10 @@ const CreateUser = () => {
       lastName: e.target.lastName.value,
       password: e.target.password.value,
       userName: e.target.userName.value,
-      forSale : [],
+      forSale: [],
       forRent: [],
       sold: [],
-      unsold: []
+      unsold: [],
     });
     setMessage("User created, return to the login page");
     e.target.firstName.value = "";
@@ -52,9 +53,14 @@ const CreateUser = () => {
   };
 
   return (
-    <div>
-      <WelcomeHeader text="Create New User" />
-      <CreateUserInput createUser={inputValidation} message={message} />
+    <div className="create-user">
+      <div className="create-user__container--left">
+        <img src={home} alt="Property search" className="create-user__img" />
+        <h1 className="create-user__title">Welcome To Property Tracker</h1>
+      </div>
+      <div className="create-user__container--right">
+        <CreateUserInput createUser={inputValidation} message={message} />
+      </div>
     </div>
   );
 };

@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import LoginInput from "../../components/LoginInput/LoginInput";
-import WelcomeHeader from "../../components/WelcomeHeader/WelcomeHeader";
+import home from "../../assets/home.svg";
+import "./Login.scss";
 
 const Login = () => {
   const [users, setUsers] = useState([]);
@@ -13,7 +14,7 @@ const Login = () => {
 
   const getUsers = async () => {
     const data = await getDocs(usersCollectionRef);
-    setUsers(data.docs)
+    setUsers(data.docs);
   };
 
   useEffect(() => {
@@ -22,14 +23,21 @@ const Login = () => {
 
   const login = (e) => {
     e.preventDefault();
-    const filteredUsers = users
-    .filter(
-      (user) => user._document.data.value.mapValue.fields.userName.stringValue === e.target.userName.value
+    const filteredUsers = users.filter(
+      (user) =>
+        user._document.data.value.mapValue.fields.userName.stringValue ===
+        e.target.userName.value
     );
     if (filteredUsers.length > 0) {
-      if (filteredUsers[0]._document.data.value.mapValue.fields.password.stringValue === e.target.password.value) {
+      if (
+        filteredUsers[0]._document.data.value.mapValue.fields.password
+          .stringValue === e.target.password.value
+      ) {
         setMessage("Success");
-        window.localStorage.setItem("PROPERTY_TRACKER_USER_REF", JSON.stringify(filteredUsers[0]._key.path.segments[6]));
+        window.localStorage.setItem(
+          "PROPERTY_TRACKER_USER_REF",
+          JSON.stringify(filteredUsers[0]._key.path.segments[6])
+        );
         navigate("/home");
       } else {
         setMessage("Password incorrect");
@@ -40,9 +48,14 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <WelcomeHeader text={"Login Below"} />
-      <LoginInput login={login} message={message} />
+    <div className="login">
+      <div className="login__container--left">
+        <img src={home} alt="Property search" className="login__img" />
+        <h1 className="login__title">Welcome To Property Tracker</h1>
+      </div>
+      <div className="login__container--right">
+        <LoginInput login={login} message={message} />
+      </div>
     </div>
   );
 };

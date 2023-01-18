@@ -1,0 +1,50 @@
+@use "../../assets/sass/variables" as *;
+
+.login {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  &__container--left {
+    grid-area: 1 / 1 / 2 / 2;
+    background: #457fca;
+    background: -webkit-linear-gradient(
+      to left,
+      #5691c8,
+      #457fca
+    );
+    background: linear-gradient(
+      to left,
+      #5691c8,
+      #457fca
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .login__img {
+      height: 15rem;
+      width: auto;
+      margin-bottom: 2rem;
+    }
+
+    .login__title {
+        font-style: italic;
+        color: $color-white;
+        font-size: 3rem;
+    }
+  }
+
+  &__container--right {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-bright-white;
+  }
+}
