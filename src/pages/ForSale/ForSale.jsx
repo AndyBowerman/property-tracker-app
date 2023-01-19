@@ -17,6 +17,7 @@ const ForSale = () => {
       (user) => user._key.path.segments[6] === JSON.parse(ref)
     );
     setUser(currentUser[0]._document.data.value.mapValue.fields);
+    console.log(currentUser[0]._document.data.value.mapValue.fields.forSale.arrayValue.values);
     setIsLoading(false);
   };  
 

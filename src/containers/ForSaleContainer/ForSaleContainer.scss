@@ -1,0 +1,10 @@
+@use '../../assets/sass/variables' as *;
+
+.for-sale-container {
+    min-height: 80vh;
+
+    &__title {
+        padding-top: 12rem;
+        text-align:center;
+    }
+}
