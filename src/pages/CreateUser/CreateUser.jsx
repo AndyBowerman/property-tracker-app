@@ -42,7 +42,6 @@ const CreateUser = () => {
       forSale: [],
       forRent: [],
       sold: [],
-      unsold: [],
     });
     setMessage("User created, return to the login page");
     e.target.firstName.value = "";

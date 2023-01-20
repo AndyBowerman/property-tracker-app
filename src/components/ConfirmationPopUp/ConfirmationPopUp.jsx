@@ -1,21 +1,21 @@
-import "./LogoutConfirmation.scss";
+import "./ConfirmationPopUp.scss";
 
-const LogoutConfirmation = ({ toggleConfirmation, logOut }) => {
+const ConfirmationPopUp = ({ message, confirmMessage, cancelMessage, confirm, cancel }) => {
   return (
     <div className="logout-confirmation">
       <div className="logout-confirmation__pop-up">
         <h2 className="logout-confirmation__title">
-          Are you sure you want to log out?
+          {message}
         </h2>
         <div className="logout-confirmation__container">
-          <button className="logout-confirmation__logout" onClick={logOut}>
-            Yes, log out
+          <button className="logout-confirmation__logout" onClick={confirm}>
+            {confirmMessage}
           </button>
           <button
             className="logout-confirmation__remain"
-            onClick={toggleConfirmation}
+            onClick={cancel}
           >
-            Cancel
+            {cancelMessage}
           </button>
         </div>
       </div>
@@ -23,4 +23,4 @@ const LogoutConfirmation = ({ toggleConfirmation, logOut }) => {
   );
 };
 
-export default LogoutConfirmation;
+export default ConfirmationPopUp;

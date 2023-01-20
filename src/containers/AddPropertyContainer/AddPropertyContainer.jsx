@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { doc, updateDoc, arrayUnion } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import AddPropertyForm from "../../components/AddPropertyForm/AddPropertyForm";
-import CreatePropertyConfirmation from "../../components/CreatePropertyConfirmation/CreatePropertyConfirmation";
-import './AddPropertyContainer.scss';
+import ConfirmationPopUp from '../../components/ConfirmationPopUp/ConfirmationPopUp';
 
 const AddPropertyContainer = () => {
   const [newProperty, setNewProperty] = useState({});
@@ -34,12 +33,7 @@ const AddPropertyContainer = () => {
 
   return (
     <div className="add-property-container">
-      {displayConfirmation && (
-        <CreatePropertyConfirmation
-          addNewProperty={addNewProperty}
-          getNewProperty={getNewProperty}
-        />
-      )}
+      {displayConfirmation && <ConfirmationPopUp message="Create listing?" confirmMessage="Confirm" cancelMessage="Cancel" confirm={addNewProperty} cancel={getNewProperty} />}
       <AddPropertyForm getNewProperty={getNewProperty} />
     </div>
   );

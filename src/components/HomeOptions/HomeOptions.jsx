@@ -10,7 +10,7 @@ const HomeOptions = () => {
     <ul className="home-options">
       <Link to="/add-property" className="home-options__link" id="link-blue">
         <AddHomeWorkIcon fontSize="large" />
-        <li className="home-options__text">Add New Property</li>
+        <li className="home-options__text">Create New Listings</li>
       </Link>
       <Link to="/for-sale" className="home-options__link" id="link-green">
       <HouseOutlinedIcon fontSize="large" />
@@ -20,7 +20,7 @@ const HomeOptions = () => {
       <BedOutlinedIcon fontSize="large" />
         <li className="home-options__text">View Properties For Rent</li>
       </Link>
-      <Link to="#" className="home-options__link" id="link-red">
+      <Link to="/sold" className="home-options__link" id="link-red">
         <KeyOutlinedIcon fontSize="large" />
         <li className="home-options__text">Sold / Rented Properties</li>
       </Link>

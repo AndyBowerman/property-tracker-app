@@ -4,7 +4,7 @@ import Layout from "../../containers/Layout/Layout"
 
 const AddProperty = () => {
   return (
-    <Layout>
+    <Layout title="Create New Listing">
         <AddPropertyContainer />
     </Layout>
    

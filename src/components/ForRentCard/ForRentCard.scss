@@ -73,6 +73,7 @@
         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
         color: $color-bright-white;
         font-weight: 500;
+        cursor: pointer;
 
         &--rented {
             background-color: $color-blue;

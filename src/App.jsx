@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import ForSale from "./pages/ForSale/ForSale";
 import ForRent from "./pages/ForRent/ForRent";
 import AddProperty from "./pages/AddProperty/AddProperty";
+import SoldProperties from "./pages/SoldProperties/SoldProperties";
 import './App.scss';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/for-sale" element={<ForSale />}></Route>
         <Route path="/for-rent" element={<ForRent />}></Route>
         <Route path="/add-property" element={<AddProperty />}></Route>
+        <Route path="/sold" element={<SoldProperties />}></Route>
         <Route path="/" element={<Login />}></Route>
       </Routes>
     </Router>
