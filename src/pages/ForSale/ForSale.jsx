@@ -53,6 +53,7 @@ const ForSale = () => {
           properties={properties}
           getPropertyEntry={getPropertyEntry}
           updateProperty={updateProperty}
+          displaySold={true}
         />
       )}
     </Layout>

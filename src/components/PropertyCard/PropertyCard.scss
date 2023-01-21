@@ -1,86 +1,100 @@
-@use '../../assets/sass/variables' as *;
+@use "../../assets/sass/variables" as *;
 
 .property-card {
-    margin: 2rem 8rem;
-    padding: 3rem 0;
-    border-top: 0.1rem dashed $color-light-grey;
+  margin: 2rem 8rem;
+  padding: 3rem 0;
+  border-top: 0.1rem dashed $color-light-grey;
+  display: flex;
+
+  &__container--img {
     display: flex;
-  
-    &__container--img {
-      display:flex;
-      justify-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5rem;
+
+    .property-card__img {
+      height: 25rem;
+      max-width: 37rem;
+    }
+  }
+
+  &__container--text {
+    padding-top: 1rem;
+
+    .property-card__title {
+      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+    }
+
+    .property-card__list {
+      display: flex;
+      height: 3rem;
+      list-style: none;
       align-items: center;
-      margin-right: 5rem;
-  
-      .property-card__img {
-        height: 25rem;
-        max-width: 37rem;
+      font-size: 1.4rem;
+
+      .property-card__item {
+        margin-right: 2rem;
       }
     }
-  
-    &__container--text {
-      padding-top: 1rem;
-  
-      .property-card__title {
-          margin-bottom: 0.5rem;
-          font-size: 2.5rem;
-      }
-  
-      .property-card__list {
-          display: flex;
-          height: 3rem;
-          list-style: none;
-          align-items: center;
-          font-size: 1.4rem;
-  
-          .property-card__item {
-              margin-right: 2rem;
-          }
-      }
-  
-      .property-card__description {
-          margin-bottom: 0.5rem;
-          font-size: 1.2rem;
-      }
-  
-      .property-card__type {
-          margin-bottom: 1rem;
-          font-size: 1.2rem;
-      }
-  
-      .property-card__value {
-          font-size: 1.8rem;
-          font-weight: 700;
-          background-color: $color-black;
-          color: $color-bright-white;
-          text-align: center;
-          border-radius: 0.3rem;
-          margin-bottom: 1rem;
-      }
-  
-      .property-card__container--btn {
-          display: flex;
-          justify-content: space-around;
-      }
-  
+
+    .property-card__description {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .property-card__type {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .property-card__value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background-color: $color-black;
+      color: $color-bright-white;
+      text-align: center;
+      border-radius: 0.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .property-card__container--btn {
+      display: flex;
+      justify-content: space-around;
+
       .property-card__btn {
-          height: 3rem;
-          width: 16rem;
-          font-size: 1.5rem;
-          border: none;
-          border-radius: 0.3rem;
-          box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-          color: $color-bright-white;
-          font-weight: 500;
-          cursor: pointer;
-  
-          &--sold {
-              background-color: $color-blue;
-          }
-  
-          &--delete {
-              background-color: $color-red;
-          }
+        height: 3rem;
+        width: 16rem;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 0.3rem;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+        color: $color-bright-white;
+        font-weight: 500;
+        cursor: pointer;
+
+        &--sold {
+          background-color: $color-blue;
+        }
+
+        &--delete {
+          background-color: $color-red;
+        }
+      }
+
+      .property-card__complete {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+        width: 16rem;
+        border-radius: 0.3rem;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+        color: $color-bright-white;
+        font-weight: 500;
+        background-color: $color-green;
       }
     }
   }
+}

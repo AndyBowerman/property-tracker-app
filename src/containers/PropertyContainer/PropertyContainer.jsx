@@ -7,6 +7,7 @@ const PropertyContainer = ({
   properties,
   getPropertyEntry,
   updateProperty,
+  displaySold,
 }) => {
   const [message, setMessage] = useState("");
   const [displayConfirmation, setDisplayConfirmation] = useState(false);
@@ -33,7 +34,9 @@ const PropertyContainer = ({
         mainImg={property.mainImg}
         propertyType={property.propertyType}
         value={property.value}
+        listingType={property.listingType}
         getPropertyEntry={setConfirmationMessage}
+        displaySold={displaySold}
       />
     );
   });
