@@ -25,8 +25,13 @@
         cursor: pointer;
     }
 
-    &__message {
+    &__failure-message {
         color: red;
+        margin-bottom: 0.5rem;
+    }
+
+    &__success-message {
+        color: green;
         margin-bottom: 0.5rem;
     }
 

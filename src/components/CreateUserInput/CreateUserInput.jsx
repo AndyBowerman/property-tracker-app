@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import './CreateUserInput.scss';
 
-const CreateUserInput = ({ createUser, message }) => {
+const CreateUserInput = ({ createUser, message, successMessage }) => {
   return (
     <div className="create-user-input">
       <form className="create-user-input__form" onSubmit={createUser}>
@@ -15,7 +15,7 @@ const CreateUserInput = ({ createUser, message }) => {
           required
           name="password2"
         />
-        <p className="create-user-input__message">{message}</p>
+        <p className={successMessage ? "create-user-input__success-message" : "create-user-input__failure-message"}>{message}</p>
         <button className="create-user-input__submit" type="submit">Create New User</button>
       </form>
       <Link to="/" className="create-user-input__link">Login</Link>

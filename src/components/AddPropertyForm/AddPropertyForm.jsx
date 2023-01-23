@@ -8,7 +8,6 @@ const AddPropertyForm = ({ getNewProperty }) => {
     bathrooms: 0,
     description: "",
     mainImg: "",
-    supportImg: [],
     propertyType: "",
     value: 0,
     listingType: "sale",
@@ -71,15 +70,6 @@ const AddPropertyForm = ({ getNewProperty }) => {
             setProperty({ ...property, mainImg: e.target.value })
           }
           required
-        />
-        <input
-          className="add-property-form__text"
-          type="text"
-          placeholder="Secondary Pictures"
-          name="supportImg"
-          onChange={(e) =>
-            setProperty({ ...property, supportImg: [e.target.value] })
-          }
         />
         <input
           className="add-property-form__text"

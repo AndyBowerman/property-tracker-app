@@ -9,12 +9,10 @@ const PropertyCard = ({
   bathrooms,
   description,
   mainImg,
-  supportImg,
   propertyType,
   value,
   getPropertyEntry,
   displaySold,
-  listingType,
 }) => {
   return (
     <div className="property-card">
