@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/property-tracker-app/static/css/main.af14456b.css",
-    "main.js": "/property-tracker-app/static/js/main.789034c5.js",
+    "main.css": "/property-tracker-app/static/css/main.23587c30.css",
+    "main.js": "/property-tracker-app/static/js/main.fe536e9c.js",
     "static/js/787.902286a9.chunk.js": "/property-tracker-app/static/js/787.902286a9.chunk.js",
     "static/media/home.svg": "/property-tracker-app/static/media/home.ea700eb49ff65e06d27ad6179001afa9.svg",
     "index.html": "/property-tracker-app/index.html",
-    "main.af14456b.css.map": "/property-tracker-app/static/css/main.af14456b.css.map",
-    "main.789034c5.js.map": "/property-tracker-app/static/js/main.789034c5.js.map",
+    "main.23587c30.css.map": "/property-tracker-app/static/css/main.23587c30.css.map",
+    "main.fe536e9c.js.map": "/property-tracker-app/static/js/main.fe536e9c.js.map",
     "787.902286a9.chunk.js.map": "/property-tracker-app/static/js/787.902286a9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.af14456b.css",
-    "static/js/main.789034c5.js"
+    "static/css/main.23587c30.css",
+    "static/js/main.fe536e9c.js"
   ]
 }
