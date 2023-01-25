@@ -12,6 +12,11 @@
         padding: 0.5rem;
     }
 
+    &__instruction {
+        width: 25rem;
+        padding: 0 0.5rem;
+    }
+
     &__submit {
         background-color: $color-blue;
         color: $color-white;

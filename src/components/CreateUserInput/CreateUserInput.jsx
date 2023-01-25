@@ -8,6 +8,7 @@ const CreateUserInput = ({ createUser, message, successMessage }) => {
         <input className="create-user-input__text" type="text" placeholder="Username" required name="userName" />
         <input className="create-user-input__text" type="text" placeholder="First Name" required name="firstName" />
         <input className="create-user-input__text" type="text" placeholder="Last Name" required name="lastName" />
+        <p className="create-user-input__instruction">Passwords must be at least 6 characters long and include at least one number.</p>
         <input className="create-user-input__text" type="password" placeholder="Password" required name="password" />
         <input className="create-user-input__text"
           type="password"

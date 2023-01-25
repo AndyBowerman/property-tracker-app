@@ -22,15 +22,16 @@ const CreateUser = () => {
 
   const inputValidation = (e) => {
     e.preventDefault();
+    setSuccessMessage(false);
     const filteredUsers = users.filter(
       (user) => user.userName.stringValue === e.target.userName.value
     );
     if (filteredUsers.length > 0) {
       setMessage("This username is already in use");
-      setSuccessMessage(false);
+    } else if (!/\d/g.test(e.target.password.value) || e.target.password.value.length < 6) {
+      setMessage("Your password didn't meet the criteria");
     } else if (e.target.password.value !== e.target.password2.value) {
       setMessage("Your password didn't match");
-      setSuccessMessage(false);
     } else {
       createUser(e);
     }

@@ -1,0 +1,5 @@
+password verification
+multiple picture upload
+individual page for each property
+update existing listings
+make responsive
