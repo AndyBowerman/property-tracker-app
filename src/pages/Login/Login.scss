@@ -36,6 +36,8 @@
         font-style: italic;
         color: $color-white;
         font-size: 3rem;
+        text-align: center;
+        padding: 0 1rem;
     }
   }
 
@@ -45,6 +47,44 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $color-bright-white;
+  }
+}
+
+@media(max-width: 900px) {
+  .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #457fca;
+    background: -webkit-linear-gradient(
+      to left,
+      #5691c8,
+      #457fca
+    );
+    background: linear-gradient(
+      to left,
+      #5691c8,
+      #457fca
+    );
+
+    &__container--left {
+      background-color: transparent;
+      background: transparent;
+
+      .login__title {
+        font-size: 2rem !important;
+      }
+    }
+  }
+}
+
+@media(max-width: 415px) {
+  .login__img {
+    height: 8rem !important;
+  }
+
+  .login__title {
+    display: none;
   }
 }

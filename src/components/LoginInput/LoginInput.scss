@@ -1,36 +1,55 @@
-@use '../../assets/sass/variables' as *;
+@use "../../assets/sass/variables" as *;
 
 .login-input {
-    padding: 0.2rem;
+  padding: 0.2rem;
 
-    &__text {
-        display: block;
-        width: 25rem;
-        font-size: 1.5rem;
-        border-radius: 0.1rem;
-        margin: 1rem 0;
-        padding: 0.5rem;
-    }
+  &__text {
+    display: block;
+    width: 25rem;
+    font-size: 1.5rem;
+    border-radius: 0.1rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
 
-    &__submit {
-        background-color: $color-blue;
-        color: $color-white;
-        border: none;
-        height: 2rem;
-        width: 5rem;
-        border-radius: 1rem;
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-        cursor: pointer;
-    }
+  .login-input__submit {
+    height: 2rem;
+    width: 5rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    background-color: $color-blue;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border: none;
+    color: $color-white;
+  }
 
-    &__message {
-        color: red;
-        margin-bottom: 0.5rem;
-    }
+  &__message {
+    color: $color-red;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
 
-    &__link {
-        font-size: 1.2rem;
-    }
+  &__link {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .login-input__submit {
+    background-color: transparent !important;
+    border: 0.1rem solid $color-white !important;
+  }
+
+  .login-input__link {
+    color: $color-white;
+  }
+}
+
+@media (max-width: 415px) {
+  .login-input__text {
+    width: 16rem;
+  }
 }

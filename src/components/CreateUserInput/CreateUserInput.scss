@@ -1,46 +1,80 @@
-@use '../../assets/sass/variables' as *;
+@use "../../assets/sass/variables" as *;
 
 .create-user-input {
-    padding: 0.2rem;
+  padding: 0.2rem;
 
-    &__text {
-        display: block;
-        width: 25rem;
-        font-size: 1.5rem;
-        border-radius: 0.1rem;
-        margin: 1rem 0;
-        padding: 0.5rem;
-    }
+  &__text {
+    display: block;
+    width: 25rem;
+    font-size: 1.5rem;
+    border-radius: 0.1rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
 
-    &__instruction {
-        width: 25rem;
-        padding: 0 0.5rem;
-    }
+  &__instruction {
+    width: 25rem;
+    padding: 0 0.5rem;
+    font-size: 1.2rem;
+  }
 
-    &__submit {
-        background-color: $color-blue;
-        color: $color-white;
-        border: none;
-        height: 2rem;
-        width: 15rem;
-        border-radius: 1rem;
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-        cursor: pointer;
-    }
+  &__submit {
+    background-color: $color-blue;
+    color: $color-white;
+    border: none;
+    height: 2rem;
+    width: 15rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    cursor: pointer;
+  }
 
-    &__failure-message {
-        color: red;
-        margin-bottom: 0.5rem;
-    }
+  &__failure-message {
+    color: $color-red;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
 
-    &__success-message {
-        color: green;
-        margin-bottom: 0.5rem;
-    }
+  &__success-message {
+    color: green;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
 
-    &__link {
-        font-size: 1.2rem;
-    }
+  &__link {
+    font-size: 1.2rem;
+  }
 }
+
+@media (max-width: 900px) {
+  .create-user-input__submit {
+    background-color: transparent !important;
+    border: 0.1rem solid $color-white !important;
+  }
+
+  .create-user-input__link {
+    color: $color-white;
+  }
+
+  .create-user-input__instruction {
+    color: $color-white;
+  }
+
+  .create-user-input__success-message {
+    color: $color-green;
+  }
+}
+
+@media (max-width: 415px) {
+    .create-user-input__text {
+      width: 16rem;
+    }
+
+    .create-user-input__instruction {
+        width: 16rem;
+      }
+  }
