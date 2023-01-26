@@ -54,10 +54,10 @@ const PropertyContainer = ({
           cancel={setConfirmationMessage}
         />
       )}
-      {properties ? (
+      {!properties.length < 1 ? (
         renderProperties
       ) : (
-        <h1 className="for-sale-container__title">
+        <h1 className="property-container__title">
           There are no properties currently available
         </h1>
       )}

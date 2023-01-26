@@ -12,7 +12,7 @@
     color: $color-bright-white;
     height: 8rem;
     width: 27rem;
-    margin: 2rem 4rem;
+    margin: 2rem 6rem;
     text-decoration: none;
     border-radius: 1rem;
     display: flex;
@@ -42,6 +42,12 @@
 
 #link-red {
   background-color: $color-red;
+}
+
+@media (max-width: 1450px) {
+  .home-options__link {
+    margin: 2rem 4rem;
+  }
 }
 
 @media (max-width: 1320px) {

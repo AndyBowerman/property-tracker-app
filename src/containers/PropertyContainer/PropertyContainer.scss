@@ -1,12 +1,16 @@
 @use '../../assets/sass/variables' as *;
 
 .property-container {
-    min-height: 80vh;
-    margin: 4rem;
+    min-height: 60vh;
+    margin: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     &__title {
-        padding-top: 12rem;
         text-align:center;
+        text-decoration: dashed;
     }
 }
 

@@ -1,8 +1,7 @@
 @use '../../assets/sass/variables' as *;
 
 .home {
-    padding: 4rem;
-    padding-top: 0;
+    padding: 0 4rem;
 
     &__container {
         border-bottom: 0.1rem dashed $color-light-grey;

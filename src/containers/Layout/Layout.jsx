@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ConfirmationPopUp from "../../components/ConfirmationPopUp/ConfirmationPopUp";
+import Footer from "../../components/Footer/Footer";
 import Nav from "../../components/Nav/Nav";
 import "./Layout.scss";
 
@@ -31,6 +32,7 @@ const Layout = ({ children, title }) => {
         <Nav toggleConfirmation={displayConfirmation} title={title} />
       </nav>
       <main className="layout__main">{children}</main>
+      <Footer />
     </div>
   );
 };
