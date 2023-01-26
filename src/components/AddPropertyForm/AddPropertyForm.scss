@@ -14,10 +14,11 @@
     background-color: $color-bright-white;
     width: 50vw;
     border-radius: 0.5rem;
+    margin-top: 5rem;
 
     .add-property-form__container {
-        width: 100%;
-        display: flex;
+      width: 100%;
+      display: flex;
     }
 
     .add-property-form__text {
@@ -61,6 +62,29 @@
         cursor: pointer;
         margin-top: 1rem;
       }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .add-property-form__form {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .add-property-form__form {
+    width: 70vw;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .add-property-form__form {
+    width: 90vw;
+
+    .add-property-form__container {
+      flex-direction: column;
     }
   }
 }

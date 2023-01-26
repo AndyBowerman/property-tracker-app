@@ -34,7 +34,7 @@ const PropertyCard = ({
           </li>
         </ul>
         <p className="property-card__description">{description}</p>
-        <p className="property-card__type">Property type: {propertyType}</p>
+        <p className="property-card__type">Property type: <b>{propertyType}</b></p>
         <p className="property-card__value">£{value}</p>
         <div className="property-card__container--btn">
           {displaySold ? (
@@ -45,7 +45,7 @@ const PropertyCard = ({
               Sold / Rented
             </button>
           ) : (
-            <p className="property-card__complete">Listing Complete!</p>
+            <p className="property-card__complete">Complete</p>
           )}
           <button
             onClick={() => getPropertyEntry(index, "delete")}

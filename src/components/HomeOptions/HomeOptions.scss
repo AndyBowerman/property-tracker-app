@@ -1,46 +1,72 @@
-@use '../../assets/sass/variables' as *;
+@use "../../assets/sass/variables" as *;
 
 .home-options {
-    height: 60vh;
-    padding: 2rem;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+
+  &__link {
+    color: $color-bright-white;
+    height: 8rem;
+    width: 27rem;
+    margin: 2rem 4rem;
+    text-decoration: none;
+    border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    list-style: none;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 
-    &__link {
-        color: $color-bright-white;
-        height: 8rem;
-        width: 27rem;
-        margin: 2rem 4rem;
-        text-decoration: none;        
-        border-radius: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    }
-
-    &__text {
-        font-size: 2rem;
-        margin-left: 0.5rem;
-    }
+  &__text {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+  }
 }
 
 #link-blue {
-    background-color: $color-blue;
+  background-color: $color-blue;
 }
 
 #link-green {
-    background-color: $color-green;
+  background-color: $color-green;
 }
 
 #link-orange {
-    background-color: $color-orange;
+  background-color: $color-orange;
 }
 
 #link-red {
-    background-color: $color-red;
+  background-color: $color-red;
+}
+
+@media (max-width: 1320px) {
+  .home-options__link {
+    width: 22rem;
+
+    .home-options__text {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media (max-width: 1165px) {
+  .home-options__link {
+    margin: 1rem 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .home-options__link {
+    width: 16rem;
+    margin: 1rem 0;
+
+    .home-options__text {
+      font-size: 1.2rem;
+    }
+  }
 }

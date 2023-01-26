@@ -1,8 +1,7 @@
 @use "../../assets/sass/variables" as *;
 
 .property-card {
-  margin: 2rem 8rem;
-  padding: 3rem 0;
+  padding: 3rem 0rem;
   border-top: 0.1rem dashed $color-light-grey;
   display: flex;
 
@@ -14,13 +13,12 @@
 
     .property-card__img {
       height: 25rem;
+      width: auto;
       max-width: 37rem;
     }
   }
 
   &__container--text {
-    padding-top: 1rem;
-
     .property-card__title {
       margin-bottom: 0.5rem;
       font-size: 2.5rem;
@@ -60,11 +58,10 @@
 
     .property-card__container--btn {
       display: flex;
-      justify-content: space-around;
 
       .property-card__btn {
         height: 3rem;
-        width: 16rem;
+        width: 50%;
         font-size: 1.5rem;
         border: none;
         border-radius: 0.3rem;
@@ -75,6 +72,7 @@
 
         &--sold {
           background-color: $color-blue;
+          margin-right: 1rem;
         }
 
         &--delete {
@@ -88,7 +86,7 @@
         justify-content: center;
         align-items: center;
         height: 3rem;
-        width: 16rem;
+        width: 50%;
         border-radius: 0.3rem;
         box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
         color: $color-bright-white;
@@ -97,4 +95,63 @@
       }
     }
   }
+}
+
+@media (max-width: 1450px) {
+  .property-card__container--img {
+    margin-right: 2rem;
+
+    .property-card__img {
+      height: 20rem;
+      max-width: 33rem;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .property-card__list {
+    flex-direction: column;
+    margin-bottom: 1rem;
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 990px) {
+  .property-card__title {
+    font-size: 2rem !important;
+  }
+
+  .property-card__description {
+    display: none;
+  }
+
+  .property-card__container--btn {
+    flex-direction: column;
+
+    .property-card__btn {
+      width: 100% !important;
+      margin-bottom: 0.2rem;
+    }
+
+    .property-card__complete {
+      width: 100% !important;
+      margin-bottom: 0.2rem;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .property-card {
+    flex-direction: column;
+
+    &__container--img {
+      margin-bottom: 0.5rem;
+      margin-right: 0;
+
+      .property-card__img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  } 
 }

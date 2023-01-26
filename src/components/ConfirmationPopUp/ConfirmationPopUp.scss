@@ -13,12 +13,11 @@
 
   &__pop-up {
     background-color: $color-bright-white;
-    height: 14rem;
-    width: 28rem;
+    padding: 3rem 2rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    padding: 4rem;
     border-radius: 0.4rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
@@ -26,6 +25,7 @@
   &__title {
     margin-bottom: 1rem;
     font-size: 1.8rem;
+    max-width: 18rem;
   }
 
   &__logout {
@@ -46,5 +46,16 @@
     background-color: $color-bright-white;
     color: $color-blue;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 375px) {
+  .logout-confirmation__pop-up {
+    padding: 2rem 1rem;
+
+    .logout-confirmation__title {
+      font-size: 1.5rem;
+      max-width: 15rem;
+    }
   }
 }

@@ -14,3 +14,13 @@
         }
     }
 }
+
+@media (max-width: 585px) {
+    .home {
+        padding: 0;
+    }
+
+    .home__title {
+        display: none;
+    }
+}

@@ -2,9 +2,22 @@
 
 .property-container {
     min-height: 80vh;
+    margin: 4rem;
 
     &__title {
         padding-top: 12rem;
         text-align:center;
+    }
+}
+
+@media (max-width: 585px) {
+    .property-container {
+        margin: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .property-container {
+        margin: 0.5rem;
     }
 }
