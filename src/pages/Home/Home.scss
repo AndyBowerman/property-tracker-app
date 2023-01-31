@@ -1,25 +1,118 @@
-@use '../../assets/sass/variables' as *;
+@use "../../assets/sass/variables" as *;
 
 .home {
-    padding: 0 4rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    &__container {
-        border-bottom: 0.1rem dashed $color-light-grey;
+  &__img {
+    height: 0;
+  }
 
-        .home__title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-    }
+  &__container {
+    z-index: 2;
+  }
 }
 
-@media (max-width: 585px) {
-    .home {
-        padding: 0;
+@media (min-width: 670px) {
+  .home__img {
+    height: 26rem;
+    position: absolute;
+  }
+}
+
+@media (min-width: 900px) {
+  .home {
+    display: flex;
+    justify-content: center;
+    border: none;
+    height: 70vh;
+    width: 90%;
+    margin: auto;
+
+    &__dec {
+      background-color: $color-turquoise;
+      height: 18rem;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
     }
 
-    .home__title {
-        display: none;
+    &__img {
+      z-index: 1;
+      position: absolute;
+      height: 20rem;
+      width: auto;
+      right: 2rem;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     }
+
+    &__container {
+      height: 15rem;
+      width: 22.5rem;
+      background-color: $color-white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+@media (min-width: 1030px) {
+  .home__img {
+    height: 23rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .home__img {
+    height: 26rem;
+  }
+}
+
+@media (min-width: 1250px) {
+  .home {
+    width: 85%;
+
+    &__img {
+      height: 28rem;
+    }
+
+    &__dec {
+      border-bottom: 0.4rem solid $color-navy;
+      height: 22rem;
+    }
+
+    &__container {
+      border-right: 0.4rem solid $color-navy;
+      border-top: 0.4rem solid $color-navy;
+      height: 18rem;
+      width: 27rem;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .home {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .home__img {
+    height: 31rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  .home__img {
+    height: 38rem;
+    right: 2rem;
+  }
+
+  .home__container {
+    width: 30rem;
+  }
 }

@@ -1,18 +1,22 @@
-@use '../../assets/sass/variables' as *;
+@use "../../assets/sass/variables" as *;
 
 .layout {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: $color-white;
+
+  &__nav {
+    width: 100%;
+  }
+
+  &__main {
+    padding: 2rem;
+    min-height: 80vh;
+    width: 100%;
     position: relative;
-
-    &__nav {
-        width: 100%;
-    }
-
-    &__main {
-        padding: 2rem;
-    }
+  }
 }

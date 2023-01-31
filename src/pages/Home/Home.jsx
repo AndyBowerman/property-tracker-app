@@ -3,6 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import Layout from "../../containers/Layout/Layout";
 import "./Home.scss";
+import showPiece from '../../assets/images/show-piece.jpg';
 import HomeOptions from "../../components/HomeOptions/HomeOptions";
 
 const Home = () => {
@@ -50,12 +51,13 @@ const Home = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout title={message}>
       <div className="home">
+        <div className="home__dec"></div>
+        <img src={showPiece} alt="Show Home" className="home__img" />
         <div className="home__container">
-          <h1 className="home__title">{message}</h1>
-        </div>        
         <HomeOptions />
+        </div>
       </div>
     </Layout>
   );

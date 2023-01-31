@@ -1,78 +1,136 @@
 @use "../../assets/sass/variables" as *;
 
 .home-options {
-  min-height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   list-style: none;
+  padding: 1.5rem;
+  border-top: 0.2rem dashed $color-navy;
+  border-bottom: 0.2rem dashed $color-navy;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   &__link {
-    color: $color-bright-white;
-    height: 8rem;
-    width: 27rem;
-    margin: 2rem 6rem;
-    text-decoration: none;
-    border-radius: 1rem;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    color: $color-navy;
+    font-weight: 400;
 
-  &__text {
+    .home-options__text {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: 670px) {
+  .home-options {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 26rem;
+    width: 39rem;
+  
+    &__link {
+      color: $color-white;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .home-options {
+    background-color: transparent;
+    height:100%;
+    width: 100%;
+
+    .home-options__link {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: $color-navy;
+    }
+  }
+}
+
+@media (min-width: 1700px) {
+  .home-options__text {
+    margin-left: 1.5rem !important;
     font-size: 2rem;
-    margin-left: 0.5rem;
   }
 }
 
-#link-blue {
-  background-color: $color-blue;
-}
+// .home-options {
+//   min-height: 60vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-wrap: wrap;
+//   list-style: none;
 
-#link-green {
-  background-color: $color-green;
-}
+//   &__link {
+//     color: $color-bright-white;
+//     height: 8rem;
+//     width: 27rem;
+//     margin: 2rem 6rem;
+//     text-decoration: none;
+//     border-radius: 1rem;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+//   }
 
-#link-orange {
-  background-color: $color-orange;
-}
+//   &__text {
+//     font-size: 2rem;
+//     margin-left: 0.5rem;
+//   }
+// }
 
-#link-red {
-  background-color: $color-red;
-}
+// #link-blue {
+//   background-color: $color-blue;
+// }
 
-@media (max-width: 1450px) {
-  .home-options__link {
-    margin: 2rem 4rem;
-  }
-}
+// #link-green {
+//   background-color: $color-green;
+// }
 
-@media (max-width: 1320px) {
-  .home-options__link {
-    width: 22rem;
+// #link-orange {
+//   background-color: $color-orange;
+// }
 
-    .home-options__text {
-      font-size: 1.6rem;
-    }
-  }
-}
+// #link-red {
+//   background-color: $color-red;
+// }
 
-@media (max-width: 1165px) {
-  .home-options__link {
-    margin: 1rem 2rem;
-  }
-}
+// @media (max-width: 1450px) {
+//   .home-options__link {
+//     margin: 2rem 4rem;
+//   }
+// }
 
-@media (max-width: 575px) {
-  .home-options__link {
-    width: 16rem;
-    margin: 1rem 0;
+// @media (max-width: 1320px) {
+//   .home-options__link {
+//     width: 22rem;
 
-    .home-options__text {
-      font-size: 1.2rem;
-    }
-  }
-}
+//     .home-options__text {
+//       font-size: 1.6rem;
+//     }
+//   }
+// }
+
+// @media (max-width: 1165px) {
+//   .home-options__link {
+//     margin: 1rem 2rem;
+//   }
+// }
+
+// @media (max-width: 575px) {
+//   .home-options__link {
+//     width: 16rem;
+//     margin: 1rem 0;
+
+//     .home-options__text {
+//       font-size: 1.2rem;
+//     }
+//   }
+// }

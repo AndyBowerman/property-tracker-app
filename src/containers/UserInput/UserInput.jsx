@@ -29,7 +29,6 @@ const UserInput = ({
         )}
       </div>
       <div className="user-input__box user-input__box--dec"></div>
-      <h3 className="user-input__footer">The Property Tracker &copy; 2023</h3>
     </div>
   );
 };
