@@ -5,9 +5,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $color-bright-white;
-  width: 50vw;
-  margin-top: 5rem;
+  width: 38rem;
+  background-color: $color-turquoise;
+  padding: 1rem 3rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 0.2rem;
 
   .add-property-form__container {
     width: 100%;
@@ -16,7 +18,7 @@
 
   .add-property-form__text {
     display: block;
-    border: 1px dotted $color-light-grey;
+    border: 1px solid $color-navy;
     width: 100%;
     font-size: 1.5rem;
     border-radius: 0.4rem;
@@ -38,7 +40,7 @@
       height: 2.2rem;
       box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
       cursor: pointer;
-      background-color: $color-blue;
+      background-color: $color-navy;
       color: $color-white;
       border: none;
       border-radius: 0.2rem;
@@ -63,40 +65,17 @@
 
     .add-property-form__submit {
       display: block;
-      background-color: $color-blue;
+      background-color: $color-navy;
       color: $color-white;
       border: none;
       height: 2rem;
       width: 15rem;
-      border-radius: 1rem;
+      border-radius: 0.5rem;
       font-size: 1.5rem;
       margin-bottom: 1rem;
       box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
       cursor: pointer;
       margin-top: 1rem;
-    }
-  }
-}
-
-@media (max-width: 1600px) {
-  .add-property-form {
-    margin-top: 2rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .add-property-form {
-    width: 70vw;
-    margin-top: 0;
-  }
-}
-
-@media (max-width: 400px) {
-  .add-property-form {
-    width: 90vw;
-
-    .add-property-form__container {
-      flex-direction: column;
     }
   }
 }

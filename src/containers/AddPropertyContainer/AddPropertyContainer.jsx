@@ -3,7 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { doc, updateDoc, arrayUnion } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import AddPropertyForm from "../../components/AddPropertyForm/AddPropertyForm";
-import ConfirmationPopUp from '../../components/ConfirmationPopUp/ConfirmationPopUp';
+import ConfirmationPopUp from "../../components/ConfirmationPopUp/ConfirmationPopUp";
+import bedroom from "../../assets/images/bedroom.jpg";
+import kitchen from "../../assets/images/kitchen.jpg";
+import livingRoom from "../../assets/images/livingRoom.jpg";
+import garden from "../../assets/images/garden.jpg";
+import "./AddPropertyContainer.scss";
 
 const AddPropertyContainer = () => {
   const [newProperty, setNewProperty] = useState({});
@@ -28,13 +33,47 @@ const AddPropertyContainer = () => {
         forRent: arrayUnion(newProperty),
       });
     }
-    navigate('/home')
+    navigate("/home");
   };
 
   return (
     <div className="add-property-container">
-      {displayConfirmation && <ConfirmationPopUp message="Create listing?" confirmMessage="Confirm" cancelMessage="Cancel" confirm={addNewProperty} cancel={getNewProperty} />}
-      <AddPropertyForm getNewProperty={getNewProperty} />
+      {displayConfirmation && (
+        <ConfirmationPopUp
+          message="Create listing?"
+          confirmMessage="Confirm"
+          cancelMessage="Cancel"
+          confirm={addNewProperty}
+          cancel={getNewProperty}
+        />
+      )}
+      <div className="add-property-container__container">
+        <AddPropertyForm getNewProperty={getNewProperty} />
+      </div>
+      <div className="add-property-container__container add-property-container__container--right">
+      <img
+          className="add-property-container__img add-property-container__img--top"
+          src={kitchen}
+          alt=""
+        />
+        <div className="add-property-container__dec add-property-container__dec--top"></div>
+        <img
+          className="add-property-container__img add-property-container__img--left"
+          src={bedroom}
+          alt=""
+        />
+        <img
+          className="add-property-container__img add-property-container__img--center"
+          src={garden}
+          alt=""
+        />
+        <img
+          className="add-property-container__img add-property-container__img--center"
+          src={livingRoom}
+          alt=""
+        />
+        <div className="add-property-container__dec"></div>
+      </div>
     </div>
   );
 };
