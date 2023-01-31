@@ -1,0 +1,139 @@
+@use "../../assets/sass/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+.user-input {
+  position: relative;
+  background-color: $color-light-grey;
+  background-image: url("https://angel-prod-public-content.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/sites/2/2020/04/property-market-malaysia-Covid-19.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__cover {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__box {
+    position: absolute;
+
+    .user-input__title {
+      font-family: $font-title;
+      color: $color-white;
+      font-size: 2.4rem;
+      font-weight: 400;
+    }
+
+    .user-input__footer {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1185px) {
+  .user-input {
+    background-image: none;
+    align-items: flex-start;
+
+    &__img-container {
+      height: 100vh;
+      width: 70vw;
+      background-image: url("https://angel-prod-public-content.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/sites/2/2020/04/property-market-malaysia-Covid-19.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .user-input__cover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &__box {
+      padding: 3rem 2rem;
+      height: 33rem;
+      width: 30rem;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 0.3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .user-input__title {
+        font-family: "Lobster", cursive;
+        font-size: 3.5rem;
+        margin-left: 0.5rem;
+        margin-bottom: 3rem;
+        width: 25rem;
+      }
+    }
+
+    .user-input__box--main {
+      bottom: 3rem;
+      right: 10rem;
+      z-index: 1;
+      background-color: $color-navy;
+    }
+
+    .user-input__box--dec {
+      bottom: 4rem;
+      right: 8rem;
+      background-color: $color-turquoise;
+    }
+
+    &__footer {
+      position: fixed;
+      bottom: 0.5rem;
+      right: 0.5rem;
+      text-align: end;
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .user-input__box--main {
+    bottom: 5rem !important;
+  }
+
+  .user-input__box--dec {
+    bottom: 6rem !important;
+  }
+}
+
+@media (min-width: 1450px) {
+  .user-input__box--main {
+    bottom: 7rem !important;
+    right: 14rem !important;
+  }
+
+  .user-input__box--dec {
+    bottom: 9rem !important;
+    right: 12rem !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .user-input__box--main {
+    bottom: 10rem !important;
+  }
+
+  .user-input__box--dec {
+    bottom: 12rem !important;
+  }
+}
+
+@media (min-width: 1700px) {
+  .user-input__box--main {
+    bottom: 12rem !important;
+    right: 20rem !important;
+  }
+
+  .user-input__box--dec {
+    bottom: 14rem !important;
+    right: 18rem !important;
+  }
+}

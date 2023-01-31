@@ -2,9 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase-config";
-import LoginInput from "../../components/LoginInput/LoginInput";
-import home from "../../assets/home.svg";
-import "./Login.scss";
+import UserInput from "../../containers/UserInput/UserInput";
 
 const Login = () => {
   const [users, setUsers] = useState([]);
@@ -47,17 +45,7 @@ const Login = () => {
     }
   };
 
-  return (
-    <div className="login">
-      <div className="login__container--left">
-        <img src={home} alt="Property search" className="login__img" />
-        <h1 className="login__title">Welcome To Property Tracker</h1>
-      </div>
-      <div className="login__container--right">
-        <LoginInput login={login} message={message} />
-      </div>
-    </div>
-  );
+  return <UserInput login={login} message={message} displayLogin={true} />;
 };
 
 export default Login;

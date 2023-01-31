@@ -34,6 +34,7 @@ const PropertyContainer = ({
         mainImg={property.mainImg}
         propertyType={property.propertyType}
         value={property.value}
+        listingType={property.listingType}
         getPropertyEntry={setConfirmationMessage}
         displaySold={displaySold}
       />

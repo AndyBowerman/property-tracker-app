@@ -1,0 +1,41 @@
+@use "../../assets/sass/variables" as *;
+
+.image-carousel {
+  height: 23rem;
+  width: 40rem;
+  background-color: $color-black;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 0;
+
+  &__img {
+    height: 100%;
+    width: auto;
+    max-width: 35.5rem;
+    background-size: cover;
+  }
+
+  &__btn {
+    color: $color-white;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__msg {
+    color: $color-white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-align: center;
+  }
+}

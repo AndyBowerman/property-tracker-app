@@ -1,0 +1,13 @@
+@use '../../assets/sass/variables' as *;
+
+.button {
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    background-color: $color-turquoise;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    color: $color-white;
+}

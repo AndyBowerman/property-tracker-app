@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "../Button/Button";
 import './LoginInput.scss';
 
 const LoginInput = ({ login, message }) => {
@@ -7,7 +8,7 @@ const LoginInput = ({ login, message }) => {
       <form className="login-input__form" onSubmit={login}>
         <input className="login-input__text" type="text" placeholder="Username" name="userName" required />
         <input className="login-input__text" type="password" placeholder="Password" name="password" required />
-        <button className="login-input__submit" type="submit">Login</button>
+        <Button text="Login" type="submit" />
         <p className="login-input__message">{message}</p>
       </form>
       <Link to="/create-user" className="login-input__link">Register</Link>
