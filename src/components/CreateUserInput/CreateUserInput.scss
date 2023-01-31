@@ -5,76 +5,54 @@
 
   &__text {
     display: block;
-    width: 25rem;
+    width: 16rem;
     font-size: 1.5rem;
     border-radius: 0.1rem;
-    margin: 1rem 0;
+    margin: 0.8rem 0;
     padding: 0.5rem;
   }
 
   &__instruction {
-    width: 25rem;
+    width: 16rem;
     padding: 0 0.5rem;
     font-size: 1.2rem;
-  }
-
-  &__submit {
-    background-color: $color-blue;
     color: $color-white;
-    border: none;
-    height: 2rem;
-    width: 15rem;
-    border-radius: 1rem;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    cursor: pointer;
   }
 
   &__failure-message {
+    width: 16rem;
     color: $color-red;
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
   }
 
   &__success-message {
+    width: 16rem;
     color: green;
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
   }
 
   &__link {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    color: $color-light-grey;
   }
 }
 
-@media (max-width: 900px) {
-  .create-user-input__submit {
-    background-color: transparent !important;
-    border: 0.1rem solid $color-white !important;
-  }
-
-  .create-user-input__link {
-    color: $color-white;
+@media (min-width: 415px) {
+  .create-user-input__text {
+    width: 25rem;
   }
 
   .create-user-input__instruction {
-    color: $color-white;
+    width: 25rem;
   }
 
   .create-user-input__success-message {
-    color: $color-green;
+    width: 25rem;
+  }
+
+  .create-user-input__failure-message {
+    width: 25rem;
   }
 }
-
-@media (max-width: 415px) {
-    .create-user-input__text {
-      width: 16rem;
-    }
-
-    .create-user-input__instruction {
-        width: 16rem;
-      }
-  }

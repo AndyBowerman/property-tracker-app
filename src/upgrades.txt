@@ -1,4 +1,3 @@
-multiple picture upload
 individual page for each property
 update existing listings
-make responsive
+Make sold listings state sold or tenanted

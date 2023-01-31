@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
 $color-black: #0e0e0e;
 $color-white: #f5f5f5;
 $color-bright-white: #ffffff;
-$color-light-grey: #cac7c7;
+$color-light-grey: #dce6e1;
 $color-dark-grey: #4c4c4c;
-$color-turquoise: #13CBC7;
+$color-turquoise: #709aa2;
 $color-blue: #457fca;
-$color-green: #19D171;
-$color-orange: #E3B00B;
-$color-red: #C63535;
+$color-navy: #3d3d4f;
+$color-green: #19d171;
+$color-orange: #e3b00b;
+$color-red: #c63535;
 
-$font-main: 'Sofia Sans', sans-serif;
+$font-main: "Sofia Sans", sans-serif;
+$font-title: "Lobster", cursive;

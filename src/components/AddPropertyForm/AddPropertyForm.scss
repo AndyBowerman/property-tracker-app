@@ -5,82 +5,94 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: $color-bright-white;
+  width: 50vw;
+  margin-top: 5rem;
 
-  &__form {
+  .add-property-form__container {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+  }
+
+  .add-property-form__text {
+    display: block;
+    border: 1px dotted $color-light-grey;
+    width: 100%;
+    font-size: 1.5rem;
+    border-radius: 0.4rem;
+    padding: 0.2rem;
+    margin: 0.5rem 0;
+
+    &--bedroom {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .add-property-form__images {
+    width: 100%;
+    display: flex;
     align-items: center;
-    background-color: $color-bright-white;
-    width: 50vw;
-    border-radius: 0.5rem;
-    margin-top: 5rem;
 
-    .add-property-form__container {
-      width: 100%;
-      display: flex;
+    .add-property-form__add {
+      width: 2.2rem;
+      height: 2.2rem;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      cursor: pointer;
+      background-color: $color-blue;
+      color: $color-white;
+      border: none;
+      border-radius: 0.2rem;
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-left: 0.3rem;
     }
+  }
 
-    .add-property-form__text {
-      display: block;
-      border: 1px dotted $color-light-grey;
-      width: 100%;
+  .add-property-form__container--btn {
+    width: 100%;
+    margin: 0.5rem 0;
+
+    .add-property-form__label {
       font-size: 1.5rem;
-      border-radius: 0.4rem;
-      padding: 0.2rem;
-      margin: 0.5rem 0;
-
-      &--bedroom {
-        margin-right: 0.5rem;
-      }
+      margin-right: 0.5rem;
     }
 
-    .add-property-form__container--btn {
-      width: 100%;
-      margin: 0.5rem 0;
+    .add-property-form__select {
+      font-size: 1.5rem;
+    }
 
-      .add-property-form__label {
-        font-size: 1.5rem;
-        margin-right: 0.5rem;
-      }
-
-      .add-property-form__select {
-        font-size: 1.5rem;
-      }
-
-      .add-property-form__submit {
-        display: block;
-        background-color: $color-blue;
-        color: $color-white;
-        border: none;
-        height: 2rem;
-        width: 15rem;
-        border-radius: 1rem;
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-        cursor: pointer;
-        margin-top: 1rem;
-      }
+    .add-property-form__submit {
+      display: block;
+      background-color: $color-blue;
+      color: $color-white;
+      border: none;
+      height: 2rem;
+      width: 15rem;
+      border-radius: 1rem;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      cursor: pointer;
+      margin-top: 1rem;
     }
   }
 }
 
 @media (max-width: 1600px) {
-  .add-property-form__form {
+  .add-property-form {
     margin-top: 2rem;
   }
 }
 
 @media (max-width: 900px) {
-  .add-property-form__form {
+  .add-property-form {
     width: 70vw;
     margin-top: 0;
   }
 }
 
 @media (max-width: 400px) {
-  .add-property-form__form {
+  .add-property-form {
     width: 90vw;
 
     .add-property-form__container {

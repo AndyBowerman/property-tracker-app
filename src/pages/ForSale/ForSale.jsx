@@ -3,6 +3,7 @@ import { doc, getDoc, updateDoc, arrayUnion } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import Layout from "../../containers/Layout/Layout";
 import PropertyContainer from "../../containers/PropertyContainer/PropertyContainer";
+import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 
 const ForSale = () => {
   const [isLoading, setIsLoading] = useState(true);

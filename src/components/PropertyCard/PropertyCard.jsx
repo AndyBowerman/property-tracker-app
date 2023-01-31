@@ -1,5 +1,7 @@
 import BedIcon from "@mui/icons-material/Bed";
 import ShowerIcon from "@mui/icons-material/Shower";
+import { useEffect } from "react";
+import ImageCarousel from "../ImageCarousel/ImageCarousel";
 import "./PropertyCard.scss";
 
 const PropertyCard = ({
@@ -11,17 +13,19 @@ const PropertyCard = ({
   mainImg,
   propertyType,
   value,
+  listingType,
   getPropertyEntry,
   displaySold,
 }) => {
+
+  const formatNumber = (num) => {
+    return parseInt(num).toLocaleString();
+  }
+
   return (
     <div className="property-card">
       <div className="property-card__container--img">
-        <img
-          src={mainImg}
-          className="property-card__img"
-          alt="Property for sale"
-        />
+        <ImageCarousel images={mainImg} />
       </div>
       <div className="property-card__container--text">
         <h1 className="property-card__title">{title}</h1>
@@ -34,8 +38,10 @@ const PropertyCard = ({
           </li>
         </ul>
         <p className="property-card__description">{description}</p>
-        <p className="property-card__type">Property type: <b>{propertyType}</b></p>
-        <p className="property-card__value">£{value}</p>
+        <p className="property-card__type">
+          Property type: <b>{propertyType}</b>
+        </p>
+        <p className="property-card__value">£{formatNumber(value)}{listingType === "rental" && " PCM"}</p>
         <div className="property-card__container--btn">
           {displaySold ? (
             <button
