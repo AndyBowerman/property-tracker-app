@@ -1,33 +1,69 @@
-@use '../../assets/sass/variables' as *;
+@use "../../assets/sass/variables" as *;
 
 .add-property-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .add-property-container__img {
+    height: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .add-property-container__container {
+    height: 31rem;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    position: relative;
 
-    &__container {
-        height: 31rem;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        position: relative;
-    }
+    &--right {
+      width: 15rem;
+      flex-direction: column;
+      flex-wrap: wrap;
 
-    &__container--right {
-        width: 55%;
-        flex-wrap: wrap;
-    }
-
-    &__img {
-        height: 15rem;
-        width: auto;
+      .add-property-container__img--sm {
+        width: 14rem;
+        height: auto;
         border-radius: 0.2rem;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         margin: 0.2rem;
-    }
+      }
 
-    &__dec {
-        height: 15rem;
+      .add-property-container__dec--top {
+        width: 14rem;
+        height: 5.1rem;
+        background-color: $color-navy;
+        border-radius: 0.2rem;
+        margin: 0.2rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .add-property-container__container {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .add-property-container__container--right {
+    width: 48rem;
+    flex-direction: row;
+  }
+
+  .add-property-container__img {
+    height: 15rem !important;
+    width: auto !important;
+    border-radius: 0.2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 0.2rem;
+  }
+
+      .add-property-container__dec {
+        height: 15rem !important;
         width: 4rem;
         background-color: $color-navy;
         margin: 0.2rem;
@@ -35,8 +71,26 @@
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
-    &__dec--top {
-        width: 4.8rem;
-        background-color: $color-turquoise;
+    .add-property-container__dec--top {
+        width: 4.8rem !important;
+        background-color: $color-turquoise !important;
+    }
+}
+
+@media (min-width: 1750px) {
+    .add-property-container__container {
+        height: 39rem;
+    }
+
+    .add-property-container__container--right {
+        width: 60rem;
+    }
+
+    .add-property-container__img {
+        height: 19rem !important;
+    }
+
+    .add-property-container__dec {
+        height: 19rem !important;
     }
 }

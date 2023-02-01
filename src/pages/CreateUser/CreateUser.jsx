@@ -52,7 +52,7 @@ const CreateUser = () => {
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore veniam ea nulla. Tempora delectus dolores maxime praesentium natus, perferendis quia facilis in id fugiat magni, tenetur doloribus. Consequatur, quidem officiis!",
           listingType: "sale",
           mainImg: [
-            "https://i2-prod.bristolpost.co.uk/incoming/article2178425.ece/ALTERNATES/s1200b/0_Exterior-Two.jpg",
+            "https://i2-prod.bristolpost.co.uk/incoming/article2178425.ece/ALTERNATES/s1200b/0_Exterior-Two.jpg", "https://images.victoriaplum.com/blog/blogpost-covers/8263637c-99ce-4601-9c55-b758b088033a.jpg?auto=format%2Ccompress&q=55", "https://www.ikea.com/images/a-light-living-room-centred-around-a-jaettebo-three-and-a-ha-d80334e03b4e4094d0e02846c7de2e85.jpg?f=xxxl", "https://learnenglish.britishcouncil.org/sites/podcasts/files/RS4956_182230177-low_0.jpg",
           ],
           propertyType: "Detached House",
           title: "8 Bedroom House",

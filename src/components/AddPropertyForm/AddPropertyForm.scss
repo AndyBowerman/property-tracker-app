@@ -1,19 +1,16 @@
 @use "../../assets/sass/variables" as *;
 
 .add-property-form {
+  width: 18rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 38rem;
-  background-color: $color-turquoise;
-  padding: 1rem 3rem;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   border-radius: 0.2rem;
 
   .add-property-form__container {
     width: 100%;
-    display: flex;
   }
 
   .add-property-form__text {
@@ -69,7 +66,7 @@
       color: $color-white;
       border: none;
       height: 2rem;
-      width: 15rem;
+      padding: 0 1rem;
       border-radius: 0.5rem;
       font-size: 1.5rem;
       margin-bottom: 1rem;
@@ -77,5 +74,36 @@
       cursor: pointer;
       margin-top: 1rem;
     }
+  }
+}
+
+@media (min-width: 500px) {
+  .add-property-form {
+    width: 27rem !important;
+    background-color: $color-turquoise;
+    padding: 1rem 3rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+    .add-property-form__container {
+      display: flex;
+    }
+
+    .add-property-form__submit {
+      width: 15rem;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .add-property-form {
+    width: 38rem !important;
+    margin: 0.2rem;
+  }
+}
+
+@media (min-width: 1750px) {
+  .add-property-form {
+    height: 38.5rem;
   }
 }

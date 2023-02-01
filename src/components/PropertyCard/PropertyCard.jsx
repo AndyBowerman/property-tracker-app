@@ -17,48 +17,70 @@ const PropertyCard = ({
   getPropertyEntry,
   displaySold,
 }) => {
-
   const formatNumber = (num) => {
     return parseInt(num).toLocaleString();
-  }
+  };
 
   return (
     <div className="property-card">
+      <div className="property-card__dec--bottom"></div>
+      <div className="property-card__dec--top"></div>
+      <div className="property-card__dec--left"></div>
       <div className="property-card__container--img">
+        <p className="property-card__value">
+          £{formatNumber(value)}
+          {listingType === "rental" && " PCM"}
+        </p>
         <ImageCarousel images={mainImg} />
       </div>
       <div className="property-card__container--text">
-        <h1 className="property-card__title">{title}</h1>
-        <ul className="property-card__list">
-          <li className="property-card__item">
-            <BedIcon /> {bedrooms} Bedrooms
-          </li>
-          <li className="property-card__item">
-            <ShowerIcon /> {bathrooms} Bathrooms
-          </li>
-        </ul>
-        <p className="property-card__description">{description}</p>
-        <p className="property-card__type">
-          Property type: <b>{propertyType}</b>
-        </p>
-        <p className="property-card__value">£{formatNumber(value)}{listingType === "rental" && " PCM"}</p>
+        <div>
+          <h1 className="property-card__title">{title}</h1>
+          <p className="property-card__description">{description}</p>
+          <p className="property-card__type">
+            Property type: <b>{propertyType}</b>
+          </p>
+          <ul className="property-card__list">
+            <li className="property-card__item">
+              <BedIcon /> {bedrooms} Bedrooms
+            </li>
+            <li className="property-card__item">
+              <ShowerIcon /> {bathrooms} Bathrooms
+            </li>
+          </ul>
+        </div>
         <div className="property-card__container--btn">
           {displaySold ? (
-            <button
+            <><button
               onClick={() => getPropertyEntry(index, "sold")}
               className="property-card__btn property-card__btn--sold"
             >
-              Sold / Rented
+              {listingType === "rental" ? "Let Agreed" : "Sold"}
             </button>
+            <button className="property-card__btn property-card__btn--update">Update</button>
+            <button
+              onClick={() => getPropertyEntry(index, "delete")}
+              className="property-card__btn property-card__btn--delete"
+            >
+              Remove
+            </button>
+            </>
           ) : (
-            <p className="property-card__complete">Complete</p>
-          )}
+            <>
+<button className="property-card__btn property-card__btn--update">Update</button>
           <button
             onClick={() => getPropertyEntry(index, "delete")}
             className="property-card__btn property-card__btn--delete"
           >
             Remove
           </button>
+            <p className="property-card__complete">
+              {listingType === "rental" ? "Let Agreed STC" : "Sold STC"}
+            </p>
+            </>
+            
+          )}
+          
         </div>
       </div>
     </div>

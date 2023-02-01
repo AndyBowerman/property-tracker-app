@@ -52,23 +52,23 @@ const AddPropertyContainer = () => {
       </div>
       <div className="add-property-container__container add-property-container__container--right">
       <img
-          className="add-property-container__img add-property-container__img--top"
+          className="add-property-container__img add-property-container__img"
           src={kitchen}
           alt=""
         />
         <div className="add-property-container__dec add-property-container__dec--top"></div>
         <img
-          className="add-property-container__img add-property-container__img--left"
+          className="add-property-container__img add-property-container__img--sm"
           src={bedroom}
           alt=""
         />
         <img
-          className="add-property-container__img add-property-container__img--center"
+          className="add-property-container__img add-property-container__img--sm"
           src={garden}
           alt=""
         />
         <img
-          className="add-property-container__img add-property-container__img--center"
+          className="add-property-container__img"
           src={livingRoom}
           alt=""
         />
