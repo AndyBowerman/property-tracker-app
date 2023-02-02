@@ -36,7 +36,7 @@ const PropertyCard = ({
           £{formatNumber(value)}
           {listingType === "rental" && " PCM"}
         </p>
-        <ImageCarousel images={mainImg} />
+        {mainImg.length > 0 ? <ImageCarousel images={mainImg} displayDelete={false} /> : <h2 className="property-card__msg">No Images Available</h2>}
       </div>
       <div className="property-card__container--text">
         <div>

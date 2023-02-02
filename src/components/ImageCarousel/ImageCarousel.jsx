@@ -3,7 +3,7 @@ import "./ImageCarousel.scss";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
-const ImageCarousel = ({ images }) => {
+const ImageCarousel = ({ images, displayDelete, deleteImages }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const incrementIndex = () => {
@@ -22,7 +22,8 @@ const ImageCarousel = ({ images }) => {
     }
   };
   return (
-    <div className="image-carousel">
+    <div className={displayDelete ? "image-carousel image-carousel__sm" : "image-carousel"}>
+      {displayDelete && <button onClick={() => deleteImages(images[currentIndex])} className="image-carousel__delete">Delete</button>}
       <button onClick={decrementIndex} className="image-carousel__btn">
         <ArrowLeftIcon fontSize="large" />
       </button>

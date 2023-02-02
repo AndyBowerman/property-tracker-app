@@ -1,3 +1,2 @@
-individual page for each property
-update existing listings
-Make sold listings state sold or tenanted
+make update page responsive
+update data - read from json file?

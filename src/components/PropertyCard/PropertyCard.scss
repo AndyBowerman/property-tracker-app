@@ -30,6 +30,20 @@
     display: none;
   }
 
+  &__msg {
+    height: 12rem;
+    width: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: $color-navy;
+    color: $color-white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 0.4rem;
+    font-size: 1.8rem;
+  }
+
   &__container--text {
     z-index: 1;
     display: flex;
@@ -127,6 +141,20 @@
   }
 }
 
+@media (min-width: 435px) {
+  .property-card__msg {
+    height: 15rem;
+    width: 24rem;
+  }
+}
+
+@media (min-width: 610px) {
+  .property-card__msg {
+    height: 19rem;
+    width: 30rem;
+  }
+}
+
 @media (min-width: 675px) {
   .property-card__dec--top {
     display: unset;
@@ -191,6 +219,11 @@
   .property-card {
     padding: 2rem;
 
+    &__msg {
+      height: 22rem;
+      width: 36rem;
+    }
+
     &__value {
       font-size: 2.8rem !important;
     }
@@ -198,6 +231,11 @@
 }
 
 @media (min-width: 1285px) {
+  .property-card__msg {
+    height: 24rem;
+    width: 40rem;
+  }
+
   .property-card__container--text {
     width: 26rem !important;
 
@@ -209,5 +247,12 @@
     .property-card__description {
       font-size: 1.3rem !important;
     }
+  }
+}
+
+@media (min-width: 1400px) {
+  .property-card__msg {
+    height: 30rem;
+    width: 50rem;
   }
 }

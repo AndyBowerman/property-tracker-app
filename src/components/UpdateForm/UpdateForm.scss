@@ -2,20 +2,12 @@
 
 .update-form {
   width: 80%;
-  min-height: 100vh;
+  max-height: 100vh;
   background-color: rgba(255, 255, 255, 0.85);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &__dec--left-top {
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    background-color: $color-turquoise;
-    left: 0;
-  }
 
   &__close {
     position: absolute;
@@ -30,34 +22,20 @@
 
   &__container--display {
     width: 50%;
-    max-height: 100vh;
+    min-height: 100vh;
     padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color: $color-turquoise;
 
-    .update-form__container--img {
-      height: 13rem;
-      width: 18rem;
-      position: relative;
-      margin: 0.2rem;
-
-      .update-form__img {
-        height: 100%;
-        width: 100%;
-      }
-
-      .update-form__close--sm {
-        background-color: $color-red;
-        color: $color-white;
-        font-size: 1.4rem;
-        top: 0.1rem;
-        right: 0.1rem;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-        padding: 0.2rem 0.5rem;
-      }
+    .update-form__msg {
+      position: absolute;
+      width: 15rem;
+      text-align: center;
+      font-weight: 400;
+      font-size: 1.8rem;
     }
   }
 

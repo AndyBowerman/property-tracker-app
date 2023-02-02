@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ImageCarousel from "../ImageCarousel/ImageCarousel";
 import "./UpdateForm.scss";
 
 const UpdateForm = ({
@@ -8,29 +9,25 @@ const UpdateForm = ({
   commitUpdatedProperty,
   deleteImages,
 }) => {
-  const renderImages = property.mainImg.map((img, index) => {
-    while (index < 6) {
-      return (
-        <div className="update-form__container--img" key={index}>
-          <img className="update-form__img" src={img} alt="" />
-          <button onClick={(e) => deleteImages(e.target.parentNode.firstChild.src)} className="update-form__close update-form__close--sm">
-            Delete
-          </button>
-        </div>
-      );
-    }
-  });
-
+  const [image, setImage] = useState("");
   return (
     <div className="update-form">
-      <div className="update-form__dec--left-top"></div>
-      <div className="update-form__dec--right-top"></div>
-      <div className="update-form__dec--left-bottom"></div>
-      <div className="update-form__dec--right-bottom"></div>
       <button className="update-form__close" onClick={() => close(0, "")}>
         x
       </button>
-      <div className="update-form__container--display">{renderImages}</div>
+      <div className="update-form__container--display">
+        {property.mainImg.length > 0 ? (
+          <ImageCarousel
+            displayDelete={true}
+            images={property.mainImg}
+            deleteImages={deleteImages}
+          />
+        ) : (
+          <h2 className="update-form__msg">
+            There are currently no images to display
+          </h2>
+        )}
+      </div>
       <div className="update-form__container--main">
         <div className="update-form__container--text">
           <label className="update-form__label" htmlFor="title">
@@ -96,12 +93,15 @@ const UpdateForm = ({
           onSubmit={(e) => {
             e.preventDefault();
             getUpdatedProperty(7, e.target.mainImg.value);
+            setImage("");
           }}
         >
           <input
             className="update-form__text"
             type="text"
             placeholder="Add Images"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
             name="mainImg"
           />
           <button className="update-form__add" type="submit">

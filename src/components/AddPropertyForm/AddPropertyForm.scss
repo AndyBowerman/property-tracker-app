@@ -22,7 +22,7 @@
     padding: 0.2rem;
     margin: 0.5rem 0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    background-color: $color-white;
+    background-color: $color-light-grey;
 
     &--bedroom {
       margin-right: 0.5rem;
@@ -62,6 +62,8 @@
       font-size: 1.5rem;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
       border-radius: 0.4rem;
+      background-color: $color-light-grey;
+      border: none;
     }
 
     .add-property-form__submit {
@@ -91,6 +93,14 @@
 
     .add-property-form__container {
       display: flex;
+    }
+
+    .add-property-form__text {
+      background-color: $color-white;
+    }
+
+    .add-property-form__select {
+      background-color: $color-white !important;
     }
 
     .add-property-form__submit {
