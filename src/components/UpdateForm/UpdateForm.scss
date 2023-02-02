@@ -1,0 +1,143 @@
+@use "../../assets/sass/variables" as *;
+
+.update-form {
+  width: 80%;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__dec--left-top {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: $color-turquoise;
+    left: 0;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__container--display {
+    width: 50%;
+    max-height: 100vh;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .update-form__container--img {
+      height: 13rem;
+      width: 18rem;
+      position: relative;
+      margin: 0.2rem;
+
+      .update-form__img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .update-form__close--sm {
+        background-color: $color-red;
+        color: $color-white;
+        font-size: 1.4rem;
+        top: 0.1rem;
+        right: 0.1rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        padding: 0.2rem 0.5rem;
+      }
+    }
+  }
+
+  &__container--main {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 1;
+
+    .update-form__container--rooms {
+      display: flex;
+      width: 90%;
+    }
+
+    .update-form__container--text {
+      display: flex;
+      flex-direction: column;
+      margin: 0.5rem 0;
+      width: 90%;
+
+      .update-form__label {
+        color: $color-black;
+        font-size: 1.1rem;
+      }
+
+      .update-form__text--rooms {
+        width: 95%;
+      }
+    }
+
+    .update-form__text {
+      width: 100%;
+      font-size: 1.3rem;
+      padding: 0.4rem;
+      border: none;
+      background-color: $color-light-grey;
+      border-radius: 0.2rem;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+
+    .update-form__images {
+      display: flex;
+      width: 90%;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    .update-form__add {
+      width: 2.2rem;
+      height: 2.2rem;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      cursor: pointer;
+      background-color: $color-navy;
+      color: $color-white;
+      border: none;
+      border-radius: 0.2rem;
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-left: 0.3rem;
+    }
+
+    .update-form__submit {
+      display: block;
+      background-color: $color-navy;
+      color: $color-white;
+      border: none;
+      height: 2rem;
+      padding: 0 1rem;
+      border-radius: 0.5rem;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+  }
+}

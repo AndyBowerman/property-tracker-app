@@ -21,6 +21,11 @@ const PropertyCard = ({
     return parseInt(num).toLocaleString();
   };
 
+  const selectFunctionality = () => {
+    let command = displaySold ? "update" : "relist";
+    getPropertyEntry(index, command, listingType);
+  }
+
   return (
     <div className="property-card">
       <div className="property-card__dec--bottom"></div>
@@ -51,36 +56,45 @@ const PropertyCard = ({
         </div>
         <div className="property-card__container--btn">
           {displaySold ? (
-            <><button
-              onClick={() => getPropertyEntry(index, "sold")}
-              className="property-card__btn property-card__btn--sold"
-            >
-              {listingType === "rental" ? "Let Agreed" : "Sold"}
-            </button>
-            <button className="property-card__btn property-card__btn--update">Update</button>
-            <button
-              onClick={() => getPropertyEntry(index, "delete")}
-              className="property-card__btn property-card__btn--delete"
-            >
-              Remove
-            </button>
+            <>
+              <button
+                onClick={() => getPropertyEntry(index, "sold")}
+                className="property-card__btn property-card__btn--sold"
+              >
+                {listingType === "rental" ? "Let Agreed" : "Sold"}
+              </button>
+              <button
+                onClick={() => getPropertyEntry(index, "update")}
+                className="property-card__btn property-card__btn--update"
+              >
+                Update
+              </button>
+              <button
+                onClick={() => getPropertyEntry(index, "delete")}
+                className="property-card__btn property-card__btn--delete"
+              >
+                Remove
+              </button>
             </>
           ) : (
             <>
-<button className="property-card__btn property-card__btn--update">Update</button>
-          <button
-            onClick={() => getPropertyEntry(index, "delete")}
-            className="property-card__btn property-card__btn--delete"
-          >
-            Remove
-          </button>
-            <p className="property-card__complete">
-              {listingType === "rental" ? "Let Agreed STC" : "Sold STC"}
-            </p>
+              <button
+                onClick={selectFunctionality}
+                className="property-card__btn property-card__btn--update"
+              >
+                {displaySold ? "Update" : "Relist"}
+              </button>
+              <button
+                onClick={() => getPropertyEntry(index, "delete")}
+                className="property-card__btn property-card__btn--delete"
+              >
+                Remove
+              </button>
+              <p className="property-card__complete">
+                {listingType === "rental" ? "Let Agreed STC" : "Sold STC"}
+              </p>
             </>
-            
           )}
-          
         </div>
       </div>
     </div>

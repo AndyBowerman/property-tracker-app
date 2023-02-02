@@ -13,7 +13,7 @@ const ConfirmationPopUp = ({ message, confirmMessage, cancelMessage, confirm, ca
           </button>
           <button
             className="logout-confirmation__remain"
-            onClick={cancel}
+            onClick={() => cancel(0, "sold")}
           >
             {cancelMessage}
           </button>

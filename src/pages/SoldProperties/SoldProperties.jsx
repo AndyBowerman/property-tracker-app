@@ -9,6 +9,9 @@ const SoldProperties = () => {
   const [properties, setProperties] = useState([]);
   const [reloadProperties, setReloadProperties] = useState(false);
   const [propertyEntry, setPropertyEntry] = useState(0);
+  const [command, setCommand] = useState("");
+  const [currentProperty, setCurrentProperty] = useState({});
+  const [listing, setListing] = useState("");
 
   const ref = window.localStorage.getItem("PROPERTY_TRACKER_USER_REF");
   const userRef = doc(db, "users", JSON.parse(ref));
@@ -19,17 +22,31 @@ const SoldProperties = () => {
     setIsLoading(false);
   };
 
-  const getPropertyEntry = (index) => {
+  const getPropertyEntry = (index, command, listingType) => {
+    setCommand(command);
+    setCurrentProperty(properties[index]);
     setPropertyEntry(index);
+    setListing(listingType);
   };
 
-  const updateProperty = async () => {
+  const reassignProperty = async () => {
     const updatedProperties = properties.filter(
       (property, index) => index !== propertyEntry
     );
     await updateDoc(userRef, {
       sold: updatedProperties,
     });
+    if (command === "relist") {
+      if (listing === "sale") {
+        await updateDoc(userRef, {
+          forSale: arrayUnion(currentProperty),
+        });
+      } else if (listing === "rental") {
+        await updateDoc(userRef, {
+          forRent: arrayUnion(currentProperty),
+        });
+      }
+    }
     setReloadProperties(!reloadProperties);
   };
 
@@ -43,12 +60,12 @@ const SoldProperties = () => {
         <PropertyContainer
           properties={properties}
           getPropertyEntry={getPropertyEntry}
-          updateProperty={updateProperty}
+          updateProperty={reassignProperty}
           displaySold={false}
         />
       )}
     </Layout>
   );
-}
+};
 
-export default SoldProperties
+export default SoldProperties;

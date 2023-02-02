@@ -21,7 +21,6 @@ const AddPropertyForm = ({ getNewProperty }) => {
       mainImg: [...property.mainImg, e.target.mainImg.value],
     });
     setImage("");
-    console.log(e.target.mainImg.value);
   };
 
   const submitNewProperty = (e) => {
@@ -75,7 +74,7 @@ const AddPropertyForm = ({ getNewProperty }) => {
         <input
           className="add-property-form__text"
           type="text"
-          placeholder="Main Picture"
+          placeholder="Add Images"
           name="mainImg"
           value={image}
           onChange={(e) => setImage(e.target.value)}

@@ -12,14 +12,18 @@ const PropertyContainer = ({
   const [message, setMessage] = useState("");
   const [displayConfirmation, setDisplayConfirmation] = useState(false);
 
-  const setConfirmationMessage = (index, command) => {
+  const setConfirmationMessage = (index, command, listingType) => {
     if (command === "sold") {
       setMessage("Take this property off the market?");
-    } else {
+      setDisplayConfirmation(!displayConfirmation);
+    } else if (command === "delete") {
       setMessage("Are you sure you would like to delete this property?");
+      setDisplayConfirmation(!displayConfirmation);
+    } else if (command === "relist") {
+      setMessage("Are you sure you would like to relist this property?");
+      setDisplayConfirmation(!displayConfirmation);
     }
-    setDisplayConfirmation(!displayConfirmation);
-    getPropertyEntry(index, command);
+    getPropertyEntry(index, command, listingType);
   };
 
   const renderProperties = properties?.map((property, index) => {

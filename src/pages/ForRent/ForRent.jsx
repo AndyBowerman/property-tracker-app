@@ -3,6 +3,7 @@ import { getDoc, doc, updateDoc, arrayUnion } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import Layout from "../../containers/Layout/Layout";
 import PropertyContainer from "../../containers/PropertyContainer/PropertyContainer";
+import UpdateProperty from "../../containers/UpdateProperty/UpdateProperty";
 
 const ForRent = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +43,8 @@ const ForRent = () => {
     setReloadProperties(!reloadProperties);
   };
 
+  const getUpdatedProperties = () => setReloadProperties(!reloadProperties);
+
   useEffect(() => {
     getProperties();
   }, [reloadProperties]);
@@ -49,12 +52,16 @@ const ForRent = () => {
   return (
     <Layout title="For Rent">
       {!isLoading && (
+        <>
         <PropertyContainer
           properties={properties}
           getPropertyEntry={getPropertyEntry}
           updateProperty={updateProperty}
           displaySold={true}
         />
+        {command === "update" && <UpdateProperty close={getPropertyEntry} index={propertyEntry} type="rental" getUpdatedProperties={getUpdatedProperties} />}
+        </>
+        
       )}
     </Layout>
   );

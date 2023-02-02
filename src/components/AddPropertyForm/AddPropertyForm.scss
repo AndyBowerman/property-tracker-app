@@ -15,12 +15,14 @@
 
   .add-property-form__text {
     display: block;
-    border: 1px solid $color-navy;
+    border: none;
     width: 100%;
     font-size: 1.5rem;
     border-radius: 0.4rem;
     padding: 0.2rem;
     margin: 0.5rem 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-color: $color-white;
 
     &--bedroom {
       margin-right: 0.5rem;
@@ -35,7 +37,7 @@
     .add-property-form__add {
       width: 2.2rem;
       height: 2.2rem;
-      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
       cursor: pointer;
       background-color: $color-navy;
       color: $color-white;
@@ -58,6 +60,8 @@
 
     .add-property-form__select {
       font-size: 1.5rem;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      border-radius: 0.4rem;
     }
 
     .add-property-form__submit {
@@ -70,7 +74,7 @@
       border-radius: 0.5rem;
       font-size: 1.5rem;
       margin-bottom: 1rem;
-      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
       cursor: pointer;
       margin-top: 1rem;
     }

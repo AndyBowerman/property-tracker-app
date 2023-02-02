@@ -3,7 +3,7 @@ import { doc, getDoc, updateDoc, arrayUnion } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import Layout from "../../containers/Layout/Layout";
 import PropertyContainer from "../../containers/PropertyContainer/PropertyContainer";
-import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
+import UpdateProperty from "../../containers/UpdateProperty/UpdateProperty";
 
 const ForSale = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,7 +11,7 @@ const ForSale = () => {
   const [reloadProperties, setReloadProperties] = useState(false);
   const [propertyEntry, setPropertyEntry] = useState(0);
   const [command, setCommand] = useState("");
-  const [soldProperty, setSoldProperty] = useState({});
+  const [currentProperty, setCurrentProperty] = useState({});
 
   const ref = window.localStorage.getItem("PROPERTY_TRACKER_USER_REF");
   const userRef = doc(db, "users", JSON.parse(ref));
@@ -24,11 +24,11 @@ const ForSale = () => {
 
   const getPropertyEntry = (index, command) => {
     setCommand(command);
-    setSoldProperty(properties[index]);
+    setCurrentProperty(properties[index]);
     setPropertyEntry(index);
   };
 
-  const updateProperty = async () => {
+  const reassignProperty = async () => {
     const updatedProperties = properties.filter(
       (property, index) => index !== propertyEntry
     );
@@ -37,11 +37,13 @@ const ForSale = () => {
     });
     if (command === "sold") {
       await updateDoc(userRef, {
-        sold: arrayUnion(soldProperty),
+        sold: arrayUnion(currentProperty),
       });
     }
     setReloadProperties(!reloadProperties);
   };
+
+  const getUpdatedProperties = () => setReloadProperties(!reloadProperties);
 
   useEffect(() => {
     getProperties();
@@ -50,12 +52,15 @@ const ForSale = () => {
   return (
     <Layout title="For Sale">
       {!isLoading && (
-        <PropertyContainer
-          properties={properties}
-          getPropertyEntry={getPropertyEntry}
-          updateProperty={updateProperty}
-          displaySold={true}
-        />
+        <>
+          <PropertyContainer
+            properties={properties}
+            getPropertyEntry={getPropertyEntry}
+            updateProperty={reassignProperty}
+            displaySold={true}
+          />
+          {command === "update" && <UpdateProperty close={getPropertyEntry} index={propertyEntry} type="sale" getUpdatedProperties={getUpdatedProperties} />}
+        </>
       )}
     </Layout>
   );
