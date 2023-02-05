@@ -87,8 +87,8 @@
   }
 
   .image-carousel__sm {
-    height: 19rem !important;
-    width: 30rem !important;
+    height: 15rem !important;
+    width: 24rem !important;
   }
 }
 
@@ -96,6 +96,11 @@
   .image-carousel {
     height: 22rem;
     width: 36rem;
+  }
+
+  .image-carousel__sm {
+    height: 19rem !important;
+    width: 30rem !important;
   }
 }
 
@@ -110,5 +115,10 @@
   .image-carousel {
     height: 30rem;
     width: 50rem;
+  }
+
+  .image-carousel__sm {
+    height: 22rem !important;
+    width: 36rem !important;
   }
 }

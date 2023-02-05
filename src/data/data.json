@@ -1,0 +1,124 @@
+{"forSale": [
+    {
+      "bathrooms": 4,
+      "bedrooms": 8,
+      "description":
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore veniam ea nulla. Tempora delectus dolores maxime praesentium natus, perferendis quia facilis in id fugiat magni, tenetur doloribus. Consequatur, quidem officiis!",
+      "listingType": "sale",
+      "mainImg": [
+        "https://i2-prod.bristolpost.co.uk/incoming/article2178425.ece/ALTERNATES/s1200b/0_Exterior-Two.jpg", "https://images.victoriaplum.com/blog/blogpost-covers/8263637c-99ce-4601-9c55-b758b088033a.jpg?auto=format%2Ccompress&q=55", "https://www.ikea.com/images/a-light-living-room-centred-around-a-jaettebo-three-and-a-ha-d80334e03b4e4094d0e02846c7de2e85.jpg?f=xxxl", "https://learnenglish.britishcouncil.org/sites/podcasts/files/RS4956_182230177-low_0.jpg"
+      ],
+      "propertyType": "Detached House",
+      "title": "8 Bedroom House",
+      "value": "2600000"
+    },
+    {
+        "bathrooms": 2,
+        "bedrooms": 4,
+        "description":
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore veniam ea nulla. Tempora delectus dolores maxime praesentium natus, perferendis quia facilis in id fugiat magni, tenetur doloribus. Consequatur, quidem officiis!",
+        "listingType": "sale",
+        "mainImg": [
+          "https://i2-prod.bristolpost.co.uk/incoming/article5948541.ece/ALTERNATES/s615/7206_30918419_IMG_00_0000.jpg", "https://ambientheatingltd.co.uk/wp-content/uploads/2021/02/georgian-refurbishment-clifton.jpg", "https://st.hzcdn.com/simgs/4df117d700be780f_4-7378/home-design.jpg"
+        ],
+        "propertyType": "Semi-Detached House",
+        "title": "3 Bedroom House",
+        "value": "575000"
+      },
+    {
+      "bathrooms": 2,
+      "bedrooms": 2,
+      "description":
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore veniam ea nulla. Tempora delectus dolores maxime praesentium natus, perferendis quia facilis in id fugiat magni, tenetur doloribus. Consequatur, quidem officiis!",
+      "listingType": "sale",
+      "mainImg": [
+        "https://cdn2-property.estateapps.co.uk/files/property/117/image/11712286/8_final.jpg", "https://www.autograph-homes.co.uk/upl_images/editor/library2-5f29344748358.jpg", "https://cdn.vox-cdn.com/thumbor/MPh9l4wp640G005C6gHWZ0wmFXw=/0x0:3600x2400/1200x0/filters:focal(0x0:3600x2400):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/23158224/Balcony_iStock_1344082102.jpg"
+      ],
+      "propertyType": "Apartment",
+      "title": "2 Bedroom Apartment",
+      "value": "395000"
+    }
+  ],
+  "forRent": [
+    {
+      "bathrooms": 3,
+      "bedrooms": 5,
+      "description":
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore veniam ea nulla. Tempora delectus dolores maxime praesentium natus, perferendis quia facilis in id fugiat magni, tenetur doloribus. Consequatur, quidem officiis!",
+      "listingType": "rental",
+      "mainImg": [
+        "https://static.standard.co.uk/2022/08/02/15/CatherinePlace_Exterior_DEXTERS.jpg?width=968&auto=webp&quality=50&crop=968%3A645%2Csmart", "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/martha-mulholland-standard-architecture-malibu-house-094-edit-1647617137.jpg", "https://www.mydomaine.com/thmb/AhA8rL8j6nsWwko6t8BQy6aBCJ4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/PSISlaterWEBREZ-62-2eefebb02a944cd5aa35b354989c56ce.jpg"
+      ],
+      "propertyType": "Townhouse",
+      "title": "5 Bedroom Townhouse",
+      "value": "4000"
+    },
+    {
+      "bathrooms": 1,
+      "bedrooms": 3,
+      "description":
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore veniam ea nulla. Tempora delectus dolores maxime praesentium natus, perferendis quia facilis in id fugiat magni, tenetur doloribus. Consequatur, quidem officiis!",
+      "listingType": "rental",
+      "mainImg": [
+        "https://www.audleyvillages.co.uk/sites/default/files/2022-11/nightingale-penthouse-living-dining-area.jpg", "https://media.theeverygirl.com/wp-content/uploads/2019/07/bedrooms-you-want-to-copy-the-everygirl-f.jpg", "https://cdn.mos.cms.futurecdn.net/HnXLX2GXgJe6Jw3Wj4GhVA.jpg"
+      ],
+      "propertyType": "Apartment",
+      "title": "3 Bedroom Apartment",
+      "value": "1800"
+    },
+    {
+      "bathrooms": 2,
+      "bedrooms": 2,
+      "description":
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore veniam ea nulla. Tempora delectus dolores maxime praesentium natus, perferendis quia facilis in id fugiat magni, tenetur doloribus. Consequatur, quidem officiis!",
+      "listingType": "rental",
+      "mainImg": [
+        "https://www.homeviews.com/wp-content/uploads/2021/10/What-does-terraced-house-mean-1980x1137.jpg?x75925", "https://www.thespruce.com/thmb/8R5uX_XKRuEhZXaOWalK5Iype48=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/HP-Midcentury-Inspired-living-room-58bdef1c3df78c353cddaa07.jpg", "https://cdn.mos.cms.futurecdn.net/ciSmPNkuPySGMC5qCKbPGj.jpg"
+      ],
+      "propertyType": "Terraced House",
+      "title": "2 Bedroom House",
+      "value": "1500"
+    }
+  ],
+  "sold": [
+    {
+      "bathrooms": 2,
+      "bedrooms": 4,
+      "description":
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore veniam ea nulla. Tempora delectus dolores maxime praesentium natus, perferendis quia facilis in id fugiat magni, tenetur doloribus. Consequatur, quidem officiis!",
+      "listingType": "sale",
+      "mainImg": [
+        "https://cdn2-property.estateapps.co.uk/files/property/42/image/18257181/O-hKi-2XxEyTMeB4TrmChw.jpg", "https://st.hzcdn.com/simgs/pictures/gardens/brixton-garden-the-london-gardener-ltd-img~52e1a71907c5b296_14-9522-1-e1ab8b0.jpg"
+      ],
+      "propertyType": "Semi-Detached House",
+      "title": "4 Bedroom House",
+      "value": "575000"
+    },
+    {
+      "bathrooms": 2,
+      "bedrooms": 3,
+      "description":
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore veniam ea nulla. Tempora delectus dolores maxime praesentium natus, perferendis quia facilis in id fugiat magni, tenetur doloribus. Consequatur, quidem officiis!",
+      "listingType": "rental",
+      "mainImg": [
+        "https://res.cloudinary.com/essential-living/image/upload/ar_1.7772511848341233,c_fill,g_auto,w_1920/f_auto/q_auto/v1/Developments/Union%20Wharf/Apartments/3%20Bed/union-wharf-3-bed-wh03_12?_a=ATO2BAA0", "https://empire-s3-production.bobvila.com/slides/16678/vertical_slide_wide/Homepolish-9280-room-design-12763053-1350x900.jpeg?1591219572"
+      ],
+      "propertyType": "Apartment",
+      "title": "3 Bedroom Apartment",
+      "value": "2100"
+    },
+    {
+      "bathrooms": 1,
+      "bedrooms": 1,
+      "description":
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore veniam ea nulla. Tempora delectus dolores maxime praesentium natus, perferendis quia facilis in id fugiat magni, tenetur doloribus. Consequatur, quidem officiis!",
+      "listingType": "sale",
+      "mainImg": [
+        "https://st.hzcdn.com/simgs/8c31444d097840b9_14-8407/_.jpg", "http://d36pgh4m67wnlt.cloudfront.net/listings/1360341/o_1fvsjup6612t41s5u1ijs18i61hjh.JPG"
+      ],
+      "propertyType": "Flat",
+      "title": "1 Bedroom Flat",
+      "value": "210000"
+    }
+  ]
+}
