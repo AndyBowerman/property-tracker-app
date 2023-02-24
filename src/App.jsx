@@ -10,11 +10,6 @@ import './App.scss';
 
 function App() {
 
-  const center = {
-    lat: -3.745,
-    lng: -38.523
-  };
-
   return (
     <Router>
       <Routes>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AddressLookUp from "../AddressLookUp/AddressLookUp";
 import "./AddPropertyForm.scss";
 
 const AddPropertyForm = ({ getNewProperty }) => {
@@ -38,6 +39,7 @@ const AddPropertyForm = ({ getNewProperty }) => {
         onChange={(e) => setProperty({ ...property, title: e.target.value })}
         required
       />
+      <AddressLookUp />
       <div className="add-property-form__container">
         <input
           className="add-property-form__text add-property-form__text--bedroom"

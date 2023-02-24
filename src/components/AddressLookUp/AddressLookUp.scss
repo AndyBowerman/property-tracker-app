@@ -1,0 +1,81 @@
+@use "../../assets/sass/variables" as *;
+
+.address-look-up {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .address-look-up__postcode {
+      border: none;
+      font-size: 1.5rem;
+      border-radius: 0.4rem;
+      padding: 0.2rem;
+      margin: 0.3rem 0;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      background-color: $color-light-grey;
+      width: 100%;
+    }
+
+    .address-look-up__submit {
+      height: 2.2rem;
+      min-width: 2.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      cursor: pointer;
+      background-color: $color-navy;
+      color: $color-white;
+      border: none;
+      border-radius: 0.2rem;
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin: 0 0.3rem;
+    }
+  }
+
+  &__select {
+    width: 100%;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 0.4rem;
+    padding: 0.2rem;
+    margin: 0.3rem 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-color: $color-light-grey;
+  }
+}
+
+#default-option {
+    color: red;
+}
+
+@media (min-width: 500px) {
+  .address-look-up__postcode {
+    background-color: $color-white !important;
+  }
+
+  .address-look-up__select {
+    background-color: $color-white !important;
+  }
+}
+
+@media (min-width: 700px) {
+  .address-look-up {
+    flex-direction: row;
+
+    &__container {
+        width: 23rem !important;
+    }
+  }
+}
