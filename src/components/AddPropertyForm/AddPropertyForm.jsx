@@ -5,6 +5,7 @@ import "./AddPropertyForm.scss";
 const AddPropertyForm = ({ getNewProperty }) => {
   const [property, setProperty] = useState({
     title: "",
+    address: { summaryLine: "", postcode: "" },
     bedrooms: 0,
     bathrooms: 0,
     description: "",
@@ -24,6 +25,13 @@ const AddPropertyForm = ({ getNewProperty }) => {
     setImage("");
   };
 
+  const selectAddress = (summaryLine, postcode) => {
+    setProperty({
+      ...property,
+      address: { summaryLine: summaryLine, postcode: postcode.toUpperCase() },
+    });
+  };
+
   const submitNewProperty = (e) => {
     e.preventDefault();
     getNewProperty(property);
@@ -39,7 +47,7 @@ const AddPropertyForm = ({ getNewProperty }) => {
         onChange={(e) => setProperty({ ...property, title: e.target.value })}
         required
       />
-      <AddressLookUp />
+      <AddressLookUp selectAddress={selectAddress} />
       <div className="add-property-form__container">
         <input
           className="add-property-form__text add-property-form__text--bedroom"
@@ -81,7 +89,9 @@ const AddPropertyForm = ({ getNewProperty }) => {
           value={image}
           onChange={(e) => setImage(e.target.value)}
         />
-        <button className="add-property-form__add" type="submit">+</button>
+        <button className="add-property-form__add" type="submit">
+          +
+        </button>
       </form>
 
       <input

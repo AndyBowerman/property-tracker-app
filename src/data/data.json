@@ -1,5 +1,6 @@
 {"forSale": [
     {
+      "address": {"summaryLine": "4 Curtis Hayward Drive, Quedgeley, Gloucester, Gloucestershire, GL2 4WL", "postcode": "GL2%204WL"},
       "bathrooms": 4,
       "bedrooms": 8,
       "description":
@@ -13,6 +14,7 @@
       "value": "2600000"
     },
     {
+      "address": {"summaryLine": "4 Curtis Hayward Drive, Quedgeley, Gloucester, Gloucestershire, GL2 4WL", "postcode": "GL2%204WL"},
         "bathrooms": 2,
         "bedrooms": 4,
         "description":
@@ -26,6 +28,7 @@
         "value": "575000"
       },
     {
+      "address": {"summaryLine": "4 Curtis Hayward Drive, Quedgeley, Gloucester, Gloucestershire, GL2 4WL", "postcode": "GL2%204WL"},
       "bathrooms": 2,
       "bedrooms": 2,
       "description":
@@ -41,6 +44,7 @@
   ],
   "forRent": [
     {
+      "address": {"summaryLine": "4 Curtis Hayward Drive, Quedgeley, Gloucester, Gloucestershire, GL2 4WL", "postcode": "GL2%204WL"},
       "bathrooms": 3,
       "bedrooms": 5,
       "description":
@@ -54,6 +58,7 @@
       "value": "4000"
     },
     {
+      "address": {"summaryLine": "4 Curtis Hayward Drive, Quedgeley, Gloucester, Gloucestershire, GL2 4WL", "postcode": "GL2%204WL"},
       "bathrooms": 1,
       "bedrooms": 3,
       "description":
@@ -67,6 +72,7 @@
       "value": "1800"
     },
     {
+      "address": {"summaryLine": "4 Curtis Hayward Drive, Quedgeley, Gloucester, Gloucestershire, GL2 4WL", "postcode": "GL2%204WL"},
       "bathrooms": 2,
       "bedrooms": 2,
       "description":
@@ -82,6 +88,7 @@
   ],
   "sold": [
     {
+      "address": {"summaryLine": "4 Curtis Hayward Drive, Quedgeley, Gloucester, Gloucestershire, GL2 4WL", "postcode": "GL2%204WL"},
       "bathrooms": 2,
       "bedrooms": 4,
       "description":
@@ -95,6 +102,7 @@
       "value": "575000"
     },
     {
+      "address": {"summaryLine": "4 Curtis Hayward Drive, Quedgeley, Gloucester, Gloucestershire, GL2 4WL", "postcode": "GL2%204WL"},
       "bathrooms": 2,
       "bedrooms": 3,
       "description":
@@ -108,6 +116,7 @@
       "value": "2100"
     },
     {
+      "address": {"summaryLine": "4 Curtis Hayward Drive, Quedgeley, Gloucester, Gloucestershire, GL2 4WL", "postcode": "GL2%204WL"},
       "bathrooms": 1,
       "bedrooms": 1,
       "description":

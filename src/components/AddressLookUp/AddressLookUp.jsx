@@ -2,7 +2,7 @@ import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import "./AddressLookUp.scss";
 
-const AddressLookUp = () => {
+const AddressLookUp = ({ selectAddress }) => {
   const [postcode, setPostcode] = useState("");
   const [addressOptions, setAddressOptions] = useState([]);
 
@@ -26,6 +26,7 @@ const AddressLookUp = () => {
     );
     const data = await response.json();
     setAddressOptions(data);
+    console.log(data);
   };
 
   const renderOptions = addressOptions.map((option, index) => {
@@ -57,9 +58,11 @@ const AddressLookUp = () => {
         className="address-look-up__select"
         name="address"
         id="address"
-        onChange={test}
+        onChange={(e) => {selectAddress(e.target.value, postcode)}}
       >
-        <option value="" id="default-option">Select Address</option>
+        <option value="" id="default-option">
+          Select Address
+        </option>
         {renderOptions}
       </select>
     </form>

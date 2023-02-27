@@ -7,6 +7,7 @@ import "./PropertyCard.scss";
 const PropertyCard = ({
   index,
   title,
+  address,
   bedrooms,
   bathrooms,
   description,
@@ -41,6 +42,7 @@ const PropertyCard = ({
       <div className="property-card__container--text">
         <div>
           <h1 className="property-card__title">{title}</h1>
+          <h3 className="property-card__address">{address}</h3>
           <p className="property-card__description">{description}</p>
           <p className="property-card__type">
             Property type: <b>{propertyType}</b>

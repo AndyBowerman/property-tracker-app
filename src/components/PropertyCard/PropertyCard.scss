@@ -53,14 +53,18 @@
     .property-card__title {
       font-size: 2rem;
       letter-spacing: 0.3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       margin-top: 1rem;
+    }
+
+    .property-card__address {
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
     }
 
     .property-card__description {
       font-size: 1.1rem;
-      letter-spacing: 0.05rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .property-card__type {
@@ -245,7 +249,7 @@
     }
 
     .property-card__description {
-      font-size: 1.3rem !important;
+      font-size: 1.2rem !important;
     }
   }
 }

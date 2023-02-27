@@ -32,6 +32,7 @@ const PropertyContainer = ({
         key={index}
         index={index}
         title={property.title}
+        address={property.address.summaryLine}
         bedrooms={property.bedrooms}
         bathrooms={property.bathrooms}
         description={property.description}
@@ -53,7 +54,7 @@ const PropertyContainer = ({
           confirmMessage="Confirm"
           cancelMessage="Cancel"
           confirm={() => {
-            setDisplayConfirmation(!displayConfirmation)
+            setDisplayConfirmation(!displayConfirmation);
             updateProperty();
           }}
           cancel={setConfirmationMessage}
