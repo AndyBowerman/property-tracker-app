@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/property-tracker-app/static/css/main.978fa9d4.css",
-    "main.js": "/property-tracker-app/static/js/main.6561ea9d.js",
+    "main.css": "/property-tracker-app/static/css/main.288a1983.css",
+    "main.js": "/property-tracker-app/static/js/main.cd08a70a.js",
     "static/js/787.902286a9.chunk.js": "/property-tracker-app/static/js/787.902286a9.chunk.js",
     "static/media/garden.jpg": "/property-tracker-app/static/media/garden.9f452152383d277df588.jpg",
     "static/media/show-piece.jpg": "/property-tracker-app/static/media/show-piece.cd4bf703c6ea8d833c39.jpg",
@@ -9,12 +9,12 @@
     "static/media/livingRoom.jpg": "/property-tracker-app/static/media/livingRoom.52f701dcc661806ba283.jpg",
     "static/media/kitchen.jpg": "/property-tracker-app/static/media/kitchen.24baa06600ae62510217.jpg",
     "index.html": "/property-tracker-app/index.html",
-    "main.978fa9d4.css.map": "/property-tracker-app/static/css/main.978fa9d4.css.map",
-    "main.6561ea9d.js.map": "/property-tracker-app/static/js/main.6561ea9d.js.map",
+    "main.288a1983.css.map": "/property-tracker-app/static/css/main.288a1983.css.map",
+    "main.cd08a70a.js.map": "/property-tracker-app/static/js/main.cd08a70a.js.map",
     "787.902286a9.chunk.js.map": "/property-tracker-app/static/js/787.902286a9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.978fa9d4.css",
-    "static/js/main.6561ea9d.js"
+    "static/css/main.288a1983.css",
+    "static/js/main.cd08a70a.js"
   ]
 }
